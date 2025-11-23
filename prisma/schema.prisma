@@ -1,0 +1,54 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+model User {
+  id          String   @id @default(cuid())
+  email       String   @unique
+  name        String?
+  program     String?
+  year        String?
+  website     String?
+  profilePic  String?
+  bio         String?
+  instagram   String?
+  twitter     String?
+  linkedin    String?
+  embedColor  String?  @default("black")
+  embedArrow  String?  @default("arrow")
+  embedCustomColor String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  connections     Connection[] @relation("UserConnections")
+  connectedBy     Connection[] @relation("ConnectedBy")
+}
+
+model Connection {
+  id        String   @id @default(cuid())
+  fromId    String
+  toId      String
+  createdAt DateTime @default(now())
+
+  fromUser  User     @relation("UserConnections", fields: [fromId], references: [id])
+  toUser    User     @relation("ConnectedBy", fields: [toId], references: [id])
+
+  @@unique([fromId, toId])
+}
+
+model VerificationCode {
+  id        String   @id @default(cuid())
+  email     String
+  code      String
+  expiresAt DateTime
+  createdAt DateTime @default(now())
+}
