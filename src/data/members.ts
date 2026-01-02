@@ -77,6 +77,18 @@ export const members: Member[] = [
     linkedin: "https://linkedin.com/in/shayaan-azeem",
     connections: [],
   },
+  {
+    id: "fiona-cai",
+    name: "Fiona Cai",
+    website: "https://fiona-cai.vercel.app",
+    program: "Computer Science",
+    year: "2030",
+    profilePic: "/photos/fiona-cai.jpg",
+    instagram: "https://instagram.com/fcaiona",
+    twitter: "https://x.com/fcaiona",
+    linkedin: "https://linkedin.com/in/fiona--cai",
+    connections: [],
+  },
 
   // ============================================
   // ADD YOUR ENTRY ABOVE THIS LINE
