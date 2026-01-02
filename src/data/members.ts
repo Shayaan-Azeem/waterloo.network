@@ -75,7 +75,17 @@ export const members: Member[] = [
     instagram: "https://instagram.com/shayaan.azeem",
     twitter: "https://x.com/shayaan_azeem",
     linkedin: "https://linkedin.com/in/shayaan-azeem",
-    connections: [],
+    connections: ["daniel-ching"],
+  },
+
+  {
+    id: "daniel-ching",
+    name: "Daniel Ching",
+    website: "https://danielcwq.com",
+    program: "Computer Science",
+    year: "2030",
+    profilePic: "/photos/daniel-ching.png",
+    connections: ["shayaan-azeem"],
   },
   {
     id: "fiona-cai",
