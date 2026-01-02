@@ -11,7 +11,7 @@ export async function GET() {
     const embedArrow = scriptTag.getAttribute('data-arrow') || 'arrow';
     const embedCustomColor = scriptTag.getAttribute('data-custom-color') || '';
     
-    const baseUrl = '${process.env.NEXT_PUBLIC_BASE_URL || 'https://uwaterloo.network'}';
+    const baseUrl = '${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.uwaterloo.network'}';
     
     // Fetch connections for this user (or all members if no user specified)
     const apiUrl = userId ? baseUrl + '/api/webring?user=' + userId : baseUrl + '/api/webring';
