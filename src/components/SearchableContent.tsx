@@ -38,7 +38,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
                     <div className="title-row">
                         <h1 className="title">uwaterloo.network</h1>
                         <a 
-                            href="https://github.com/shayaanazeem/webring"
+                            href="https://github.com/Shayaan-Azeem/waterloo.network"
                             target="_blank"
                             rel="noopener noreferrer"
                             className="github-link"
@@ -58,7 +58,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
                         </p>
                         <p>
                             want to join? <a 
-                                href="https://github.com/shayaanazeem/webring#how-to-join" 
+                                href="https://github.com/Shayaan-Azeem/waterloo.network#join-the-webring" 
                                 target="_blank" 
                                 rel="noopener noreferrer"
                                 className="join-link"
