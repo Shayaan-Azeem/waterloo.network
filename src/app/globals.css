@@ -351,6 +351,11 @@ a {
 @media (max-width: 768px) {
   .main-container {
     padding: 2rem;
+    gap: 2rem;
+  }
+  
+  .content-wrapper {
+    gap: 2rem;
   }
   
   .title {
@@ -361,6 +366,33 @@ a {
     flex-direction: column;
     align-items: flex-start;
     gap: 1rem;
+  }
+  
+  .graph-section {
+    max-width: 100%;
+  }
+  
+  /* Hide program and year columns on tablet */
+  .members-table th:nth-child(2),
+  .members-table td:nth-child(2),
+  .members-table th:nth-child(3),
+  .members-table td:nth-child(3) {
+    display: none;
+  }
+  
+  .members-table {
+    table-layout: auto;
+  }
+  
+  .members-table th,
+  .members-table td {
+    padding-right: 1rem;
+    font-size: 0.9rem;
+  }
+  
+  .members-table th {
+    font-size: 1rem;
+    padding-bottom: 1rem;
   }
   
   .ascii-art-background {
@@ -375,7 +407,65 @@ a {
 
 @media (max-width: 480px) {
   .main-container {
-    padding: 1.5rem;
+    padding: 1.25rem;
+    gap: 1.5rem;
+  }
+  
+  .content-wrapper {
+    gap: 1.5rem;
+  }
+  
+  .title {
+    font-size: 1.5rem;
+  }
+  
+  .description {
+    font-size: 0.9rem;
+  }
+  
+  .github-link {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  
+  /* Hide site column too on mobile, keep just name and links */
+  .members-table th:nth-child(4),
+  .members-table td:nth-child(4) {
+    display: none;
+  }
+  
+  .members-table th,
+  .members-table td {
+    padding: 0.75rem 0.5rem 0.75rem 0;
+    font-size: 0.85rem;
+  }
+  
+  .members-table th {
+    font-size: 0.9rem;
+    padding-bottom: 0.75rem;
+  }
+  
+  .members-table td:nth-child(5) {
+    padding-left: 0;
+  }
+  
+  .avatar {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+  }
+  
+  .user-cell {
+    gap: 0.5rem;
+  }
+  
+  .search-bar-container {
+    padding: 0.6rem 0.8rem;
+  }
+  
+  .search-input {
+    font-size: 0.9rem;
   }
   
   .ascii-art-background {
