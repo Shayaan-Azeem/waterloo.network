@@ -52,18 +52,21 @@ export const members: Member[] = [
   // ============================================
 
   // Example entry (copy this as a template):
-  // {
-  //   id: "john-doe",
-  //   name: "John Doe",
-  //   website: "https://johndoe.com",
-  //   program: "Computer Science",
-  //   year: "2026",
-  //   profilePic: "/photos/john-doe.jpg",
-  //   instagram: "https://instagram.com/johndoe",
-  //   twitter: "https://x.com/johndoe",
-  //   linkedin: "https://linkedin.com/in/johndoe",
-  //   connections: ["jane-smith", "bob-wilson"],
-  // },
+
+  /* 
+    {
+    id: "john-doe",
+    name: "John Doe",
+    website: "https://johndoe.com",
+    program: "Computer Science",
+    year: "2026",
+    profilePic: "/photos/john-doe.jpg",
+    instagram: "https://instagram.com/johndoe",
+    twitter: "https://x.com/johndoe",
+    linkedin: "https://linkedin.com/in/johndoe",
+    connections: ["jane-smith", "bob-wilson"],
+    },
+  */
 
   {
     id: "shayaan-azeem",
@@ -122,6 +125,18 @@ export const members: Member[] = [
     twitter: "https://x.com/fcaiona",
     linkedin: "https://linkedin.com/in/fiona--cai",
     connections: [],
+  },
+  {
+   id: "aayan-rahman",
+   name: "Aayan Rahman",
+   website: "https://aayanrahman.me",
+   program: "Electrical Engineering",
+   year: "2030",
+   profilePic: "/photos/aayan-rahman.PNG",
+   instagram: "https://www.instagram.com/aayanr300/",
+   twitter: "https://x.com/aayanr07",
+   linkedin: "https://www.linkedin.com/in/aayan-rahman/",
+   connections: ["zane-beeai", "shayaan-azeem"],
   },
 
   // ============================================
