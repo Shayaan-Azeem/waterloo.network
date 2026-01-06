@@ -171,6 +171,17 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/pranav-marthi-7714a4215/",
     connections: ["shayaan-azeem", "zane-beeai", "kevin-thomas"]
   }
+  {
+    id: "avaansh-nanda",
+    name: "Avaansh Nanda",
+    website: "https://www.avaansh-nanda.com/",
+    program: "Computing and Financial Management",
+    year: "2030",
+    profilePic: "/photos/avaansh-nanda.jpg",
+    instagram: "https://www.instagram.com/avaanshnanda/",
+    linkedin: "https://www.linkedin.com/in/avaansh-nanda/",
+    connections: ["shayaan-azeem", "pranav-marthi"]
+  }
 
   // ============================================
   // ADD YOUR ENTRY ABOVE THIS LINE
