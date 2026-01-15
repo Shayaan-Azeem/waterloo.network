@@ -206,7 +206,7 @@ export const members: Member[] = [
   },
   {
     id: "justin-wu",
-    name: "Justin Wu",
+    name: "JustinWu",
     website: "https://justinwu.net",
     program: "Systems Design Engineering",
     year: "2030",
