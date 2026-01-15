@@ -215,6 +215,19 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/justin-wu-171481162/",
     connections: ["shayaan-azeem", "daniel-ching", "casper-dong", "kevin-thomas", "aayan-rahman"]
   },
+  {
+    id: "tony-pan",
+    name: "Tony Pan",
+    website: "https://www.tony-pan.com",
+    program: "Computer Science",
+    year: "2030",
+    profilePic: "/photos/tony-pan.jpg",
+    instagram: "https://www.instagram.com/7onypan/",
+    twitter: "https://x.com/tpypan",
+    linkedin: "https://www.linkedin.com/in/tony-py-pan/",
+    connections: ["shayaan-azeem", "zane-beeai", "pranav-marthi", "casper-dong", "aayan-rahman"]
+  },
+
   // ============================================
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
