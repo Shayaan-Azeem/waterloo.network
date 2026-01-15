@@ -86,7 +86,7 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/zanevsgravity/",
     twitter: "https://x.com/zanebeeai",
     linkedin: "https://www.linkedin.com/in/zane-beeai/",
-    connections: ["shayaan-azeem"],
+    connections: ["shayaan-azeem, casper-dong"],
   },
   {
     id: "daniel-ching",
@@ -203,6 +203,17 @@ export const members: Member[] = [
     twitter: "https://x.com/casperkeyidong",
     linkedin: "https://www.linkedin.com/in/casper-dong-64b623207/",
     connections: ["shayaan-azeem", "pranav-marthi", "kevin-thomas"]
+  },
+  {
+    id: "tony-pan",
+    name: "Tony Pan",
+    website: "https://tony-pan.com",
+    program: "Computer Science",
+    year: "2030",
+    profilePic: "/photos/IMG_4194-min.jpg",
+    twitter: "https://x.com/tpypan",
+    linkedin: "https://www.linkedin.com/in/tony-py-pan/",
+    connections: ["shayaan-azeem", "pranav-marthi", "zane-beeai", "casper-dong"]
   },
   // ============================================
   // ADD YOUR ENTRY ABOVE THIS LINE
