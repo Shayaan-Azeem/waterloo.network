@@ -10,6 +10,10 @@ export async function GET() {
     const embedColor = scriptTag.getAttribute('data-color') || 'black';
     const embedArrow = scriptTag.getAttribute('data-arrow') || 'arrow';
     const embedCustomColor = scriptTag.getAttribute('data-custom-color') || '';
+    const embedAlign = scriptTag.getAttribute('data-align') || 'left';
+    const embedBackground = scriptTag.getAttribute('data-background') || '';
+    const embedBorder = scriptTag.getAttribute('data-border') || '';
+    const embedNoBg = scriptTag.hasAttribute('data-no-background');
     
     const baseUrl = '${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.uwaterloo.network'}';
     
@@ -19,16 +23,48 @@ export async function GET() {
     fetch(apiUrl)
         .then(res => res.json())
         .then(data => {
+            // Create a wrapper for alignment
+            const wrapper = document.createElement('div');
+            wrapper.className = 'uwaterloo-webring-wrapper';
+            const alignStyles = {
+                'left': 'justify-content: flex-start;',
+                'center': 'justify-content: center;',
+                'right': 'justify-content: flex-end;'
+            };
+            wrapper.style.cssText = \`
+                display: flex;
+                width: 100%;
+                \${alignStyles[embedAlign] || alignStyles['left']}
+            \`;
+            
             const container = document.createElement('div');
             container.id = 'uwaterloo-webring';
+            container.className = 'uwaterloo-webring';
+            
+            // Build background style
+            let bgStyle = 'background: #f9f9f9;';
+            if (embedNoBg) {
+                bgStyle = 'background: transparent;';
+            } else if (embedBackground) {
+                bgStyle = 'background: ' + embedBackground + ';';
+            }
+            
+            // Build border style
+            let borderStyle = 'border: 2px solid #e0e0e0;';
+            if (embedNoBg) {
+                borderStyle = 'border: none;';
+            } else if (embedBorder) {
+                borderStyle = 'border: 2px solid ' + embedBorder + ';';
+            }
+            
             container.style.cssText = \`
                 display: inline-flex;
                 align-items: center;
                 gap: 12px;
                 padding: 12px;
-                background: #f9f9f9;
+                \${bgStyle}
                 border-radius: 12px;
-                border: 2px solid #e0e0e0;
+                \${borderStyle}
                 font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
                 transition: all 0.3s ease;
             \`;
@@ -167,7 +203,8 @@ export async function GET() {
             container.appendChild(centerLink);
             container.appendChild(rightArrow);
             
-            scriptTag.parentNode.insertBefore(container, scriptTag.nextSibling);
+            wrapper.appendChild(container);
+            scriptTag.parentNode.insertBefore(wrapper, scriptTag.nextSibling);
         })
         .catch(err => {
             console.error('Webring error:', err);
