@@ -238,6 +238,17 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/alex-xu7/",
     connections: ["shayaan-azeem"]
   },
+  {
+    id: "austin-jian",
+    name: "Austin Jian",
+    website: "https://www.austinjian.ca",
+    program: "Computer Science",
+    year: "2030",
+    profilePic: "/photos/austin-jian.jpg",
+    twitter: "https://x.com/austinjian_",
+    linkedin: "https://www.linkedin.com/in/austin-jian",
+    connections: ["shayaan-azeem"]
+  },
   // ============================================
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
