@@ -42,18 +42,14 @@ export async function GET() {
             container.className = 'uwaterloo-webring';
             
             // Build background style
-            let bgStyle = 'background: #f9f9f9;';
-            if (embedNoBg) {
-                bgStyle = 'background: transparent;';
-            } else if (embedBackground) {
+            let bgStyle = 'background: transparent;';
+            if (embedBackground) {
                 bgStyle = 'background: ' + embedBackground + ';';
             }
             
             // Build border style
-            let borderStyle = 'border: 2px solid #e0e0e0;';
-            if (embedNoBg) {
-                borderStyle = 'border: none;';
-            } else if (embedBorder) {
+            let borderStyle = 'border: none;';
+            if (embedBorder) {
                 borderStyle = 'border: 2px solid ' + embedBorder + ';';
             }
             
