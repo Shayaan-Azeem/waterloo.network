@@ -278,7 +278,7 @@ export const members: Member[] = [
     id: "advaith-karthikeyan",
     name: "Advaith Karthikeyan",
     website: "https://www.advaith.info/",
-    program: "Industrial & Systems Engineering",
+    program: "Exchange",
     year: "2026",
     profilePic: "/photos/advaith.jpg",
     instagram: "https://www.instagram.com/advaith_12/",
