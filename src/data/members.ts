@@ -79,7 +79,7 @@ export const members: Member[] = [
   {
     id: "zane-beeai",
     name: "Zane Beeai",
-    website: "https://zanebeeai.com/c/waterloo network",
+    website: "https://zanebeeai.com",
     program: "Biomedical Engineering",
     year: "2030",
     profilePic: "/photos/zane-beeai.png",
