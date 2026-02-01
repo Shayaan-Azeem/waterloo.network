@@ -274,6 +274,18 @@ export const members: Member[] = [
     connections: ["shayaan-azeem", "muhib-waqar", 
       "kevin-thomas", "justin-wu", "casper-dong", "austin-jian", "alex-xu"]
   },
+  {
+    id: "advaith-karthikeyan",
+    name: "Advaith Karthikeyan",
+    website: "https://www.advaith.info/",
+    program: "Industrial & Systems Engineering",
+    year: "2026",
+    profilePic: "/photos/advaith.jpg",
+    instagram: "https://www.instagram.com/advaith_12/",
+    twitter: "https://x.com/advaith_12",
+    linkedin: "https://www.linkedin.com/in/advaithkarthikeyan/",
+    connections: ["shayaan-azeem", "muhib-waqar"]
+  },
   // ============================================
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
