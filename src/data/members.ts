@@ -298,6 +298,18 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/neiloyc/",
     connections: ["muhib-waqar", "demir-eren"]
   },
+  {
+    id: "ricky-tang",
+    name: "Ricky Tang",
+    website: "https://rickytang.dev",
+    program: "Software Engineering",
+    year: "2030",
+    profilePic: "/photos/ricky-tang.jpg",
+    instagram: "https://www.instagram.com/rickytang.dev/",
+    twitter: "https://x.com/_rickytang",
+    linkedin: "https://www.linkedin.com/in/ricky-tang-dev/",
+    connections: ["abdullah-rajput", "muhib-waqar"]
+  },
   // ============================================
 
   // ADD YOUR ENTRY ABOVE THIS LINE
