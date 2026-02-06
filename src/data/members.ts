@@ -297,6 +297,17 @@ export const members: Member[] = [
     twitter: "https://x.com/_neiloy",
     linkedin: "https://www.linkedin.com/in/neiloyc/",
     connections: ["muhib-waqar", "demir-eren"]
+  },  
+  {
+    id: "parsa-ahmadnezhad",
+    name: "Parsa Ahmadnezhad",
+    website: "https://parsaa.ca",
+    program: "Mathematics",
+    profilePic: "/photos/parsa.jpg",
+    instagram: "https://instagram.com/parsa.1l",
+    twitter: "https://x.com/parsaxa",
+    linkedin: "https://linkedin.com/in/parsa-ahmadnezhad",
+    connections: ["kevin-thomas", "shayaan-azeem", "casper-dong", "abdullah-rajput", "pranav-marthi", "ayan-rahman", "fiona-cai"]
   },
   // ============================================
 
