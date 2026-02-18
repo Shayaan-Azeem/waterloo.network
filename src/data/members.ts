@@ -321,6 +321,17 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/ricky-tang-dev/",
     connections: ["abdullah-rajput", "muhib-waqar"]
   },
+  {
+    id: "ammar-adam",
+    name: "Ammar Adam",
+    website: "https://ammaradam.com/",
+    program: "Computer Science & Finance",
+    profilePic: "/photos/ammar-adam.jpg",
+    instagram: "https://www.instagram.com/ammar_adam587/",
+    twitter: "https://x.com/ammaradam_5807",
+    linkedin: "https://linkedin.com/in/ammar-adam",
+    connections: ["avvansh-nanda", "pranav-marthi", "shayaan-azeem"],
+  },
   // ============================================
 
   // ADD YOUR ENTRY ABOVE THIS LINE
