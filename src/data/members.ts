@@ -207,13 +207,13 @@ export const members: Member[] = [
   {
     id: "justin-wu",
     name: "Justin Wu",
-    website: "https://justinwu.net",
+    website: "https://justinzwu.com",
     program: "Systems Design Engineering",
     year: "2030",
     profilePic: "/photos/justin-wu.jpg",
     twitter: "https://x.com/byjustinwu",
-    linkedin: "https://www.linkedin.com/in/justin-wu-171481162/",
-    connections: ["shayaan-azeem", "daniel-ching", "casper-dong", "kevin-thomas", "aayan-rahman"]
+    linkedin: "https://www.linkedin.com/in/justinzijinwu/",
+    connections: ["shayaan-azeem", "daniel-ching", "casper-dong", "kevin-thomas", "aayan-rahman", "demir-eren", "austin-jian"]
   },
   {
     id: "tony-pan",
