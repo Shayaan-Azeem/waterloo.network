@@ -5,6 +5,7 @@ import { Member, Connection } from '@/data/members';
 import MembersTable from './MembersTable';
 import NetworkGraph from './NetworkGraph';
 import AsciiBackground from './AsciiBackground';
+import JoinModal from './JoinModal';
 import { Search } from 'lucide-react';
 
 // Fisher-Yates shuffle
@@ -25,7 +26,8 @@ interface SearchableContentProps {
 export default function SearchableContent({ members, connections }: SearchableContentProps) {
     const [searchQuery, setSearchQuery] = useState('');
     const [shuffledMembers, setShuffledMembers] = useState<Member[]>(members);
-    
+    const [showJoinModal, setShowJoinModal] = useState(false);
+
     // Shuffle members only on client side after hydration
     useEffect(() => {
         setShuffledMembers(shuffleArray(members));
@@ -52,25 +54,23 @@ export default function SearchableContent({ members, connections }: SearchableCo
             <div className="content-wrapper">
                 <div className="header-section">
                     <div className="title-row">
-                        <h1 className="title">uwaterloo.network</h1>
+                        <h1 className="title">uhouston.network</h1>
                     </div>
                     <div className="description">
-                        <p>welcome to the official webring for university of waterloo students.</p>
+                        <p>welcome to the official webring for university of houston students.</p>
                         <p>
-                            our school is home to some of the most talented engineers, builders, makers, 
-                            artists, designers, writers, and everything in between. this is a place to 
-                            find other cool people who also go to waterloo, a directory of the people 
+                            our school is home to some of the most talented engineers, builders, makers,
+                            artists, designers, writers, and everything in between. this is a place to
+                            find other cool coogs who also go to UH, a directory of the people
                             who actually make this place special.
                         </p>
                         <p>
-                            want to join? <a 
-                                href="https://github.com/Shayaan-Azeem/waterloo.network#join-the-webring" 
-                                target="_blank" 
-                                rel="noopener noreferrer"
+                            want to join? <button
+                                onClick={() => setShowJoinModal(true)}
                                 className="join-link"
                             >
-                                submit a pull request
-                            </a>
+                                fill out the form →
+                            </button>
                         </p>
                     </div>
                 </div>
@@ -99,13 +99,15 @@ export default function SearchableContent({ members, connections }: SearchableCo
                         </button>
                     )}
                 </div>
-                <NetworkGraph 
-                    members={members} 
-                    connections={connections} 
+                <NetworkGraph
+                    members={members}
+                    connections={connections}
                     highlightedMemberIds={filteredMembers.map(m => m.id)}
                     searchQuery={searchQuery}
                 />
             </div>
+
+            <JoinModal isOpen={showJoinModal} onClose={() => setShowJoinModal(false)} />
         </main>
     );
 }

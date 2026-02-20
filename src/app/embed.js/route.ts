@@ -15,7 +15,7 @@ export async function GET() {
     const embedBorder = scriptTag.getAttribute('data-border') || '';
     const embedNoBg = scriptTag.hasAttribute('data-no-background');
     
-    const baseUrl = '${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.uwaterloo.network'}';
+    const baseUrl = '${process.env.NEXT_PUBLIC_BASE_URL || 'https://www.uhouston.network'}';
     
     // Fetch connections for this user (or all members if no user specified)
     const apiUrl = userId ? baseUrl + '/api/webring?user=' + userId : baseUrl + '/api/webring';
@@ -25,7 +25,7 @@ export async function GET() {
         .then(data => {
             // Create a wrapper for alignment
             const wrapper = document.createElement('div');
-            wrapper.className = 'uwaterloo-webring-wrapper';
+            wrapper.className = 'uhouston-webring-wrapper';
             const alignStyles = {
                 'left': 'justify-content: flex-start;',
                 'center': 'justify-content: center;',
@@ -38,8 +38,8 @@ export async function GET() {
             \`;
             
             const container = document.createElement('div');
-            container.id = 'uwaterloo-webring';
-            container.className = 'uwaterloo-webring';
+            container.id = 'uhouston-webring';
+            container.className = 'uhouston-webring';
             
             // Build container styles based on whether background/border is set
             const hasBackground = embedBackground || embedBorder;
@@ -89,7 +89,7 @@ export async function GET() {
             centerLink.href = baseUrl;
             centerLink.target = '_blank';
             centerLink.rel = 'noopener noreferrer';
-            centerLink.title = 'Visit uwaterloo.network';
+            centerLink.title = 'Visit uhouston.network';
             centerLink.style.cssText = \`
                 display: flex;
                 transition: transform 0.2s;
@@ -118,7 +118,7 @@ export async function GET() {
                 
                 const icon = document.createElement('img');
                 icon.src = iconSrc;
-                icon.alt = 'UWaterloo Webring';
+                icon.alt = 'UHouston Webring';
                 icon.style.cssText = \`
                     width: 56px;
                     height: 56px;

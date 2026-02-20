@@ -1,35 +1,16 @@
-# uwaterloo.network
+# uhouston.network
 
-A webring for University of Waterloo students.
+A webring for University of Houston students.
 
 ---
 
 ## Join the Webring
 
-**Requirements:** UWaterloo student + personal website
+**Requirements:** UH student + personal website
 
-### 1. Add your photo
+### How to Join
 
-Save a square image (400x400px) to:
-```
-public/photos/your-name.jpg
-```
-
-### 2. Add yourself to `src/data/members.ts`
-
-```typescript
-{
-  id: "your-name",
-  name: "Your Name",
-  website: "https://yourwebsite.com",
-  profilePic: "/photos/your-name.jpg",
-  connections: ["shayaan-azeem"],  // friends in the webring
-},
-```
-
-Optional fields: `program`, `year`, `instagram`, `twitter`, `linkedin` (use full URLs)
-
-### 3. Submit a pull request
+Visit [uhouston.network/join](https://uhouston.network/join) and fill out the form. We'll review your submission and add you to the webring!
 
 ---
 
@@ -37,18 +18,18 @@ Optional fields: `program`, `year`, `instagram`, `twitter`, `linkedin` (use full
 
 ```html
 <script 
-  src="https://uwaterloo.network/embed.js" 
+  src="https://uhouston.network/embed.js" 
   data-webring
   data-user="your-name"
 ></script>
 ```
 
 **What it does:**
-- Center icon → links to [uwaterloo.network](https://uwaterloo.network)
+- Center icon → links to [uhouston.network](https://uhouston.network)
 - Arrows → open your connections' websites
 
 **Customize:** Add `data-color="red"` or `data-arrow="chevron"` for different styles.
 
 ---
 
-made with ❤️ by shayaan, kevin, daniel, casper
+made with ❤️ for coogs everywhere

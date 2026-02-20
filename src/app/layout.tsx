@@ -14,20 +14,20 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "uwaterloo.network",
-  description: "A webring for UWaterloo students",
+  title: "uhouston.network",
+  description: "A webring for University of Houston students",
   icons: {
     icon: '/favicon.svg',
   },
   openGraph: {
-    title: "uwaterloo.network",
-    description: "A webring for UWaterloo students",
+    title: "uhouston.network",
+    description: "A webring for University of Houston students",
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: "uwaterloo.network",
-    description: "A webring for UWaterloo students",
+    title: "uhouston.network",
+    description: "A webring for University of Houston students",
   },
 };
 

@@ -1,11 +1,7 @@
 /**
- * UWATERLOO WEBRING MEMBERS
+ * UHOUSTON WEBRING MEMBERS
  * 
- * To add yourself to the webring:
- * 1. Fork this repository
- * 2. Add your profile picture to /public/photos/ (see below)
- * 3. Add your entry to the members array below
- * 4. Submit a pull request
+ * To add yourself to the webring, visit the join page at uhouston.network/join
  * 
  * Required fields:
  * - id: Your name with hyphens (e.g., "john-doe")
@@ -13,7 +9,7 @@
  * - website: Your personal website URL (required to be part of the webring!)
  * 
  * Optional fields:
- * - program: Your program at UWaterloo
+ * - program: Your program/major at UH
  * - year: Your graduation year
  * - profilePic: Path to your photo (see instructions below)
  * - instagram: Full URL to your Instagram profile
@@ -65,264 +61,7 @@ export const members: Member[] = [
   //   connections: ["jane-smith", "bob-wilson"],
   // },
 
-  {
-    id: "shayaan-azeem",
-    name: "Shayaan Azeem",
-    website: "https://shayaanazeem.com",
-    program: "Applied Math",
-    profilePic: "/photos/shayaan-azeem.jpg",
-    instagram: "https://instagram.com/shayaan.azeem",
-    twitter: "https://x.com/shayaan",
-    linkedin: "https://linkedin.com/in/shayaan-azeem",
-    connections: ["daniel-ching", "fiona-cai", "kevin-thomas"],
-  },
-  {
-    id: "zane-beeai",
-    name: "Zane Beeai",
-    website: "https://zanebeeai.com",
-    program: "Biomedical Engineering",
-    year: "2030",
-    profilePic: "/photos/zane-beeai.png",
-    instagram: "https://www.instagram.com/zanevsgravity/",
-    twitter: "https://x.com/zanebeeai",
-    linkedin: "https://www.linkedin.com/in/zane-beeai/",
-    connections: ["shayaan-azeem"],
-  },
-  {
-    id: "daniel-ching",
-    name: "Daniel Ching",
-    website: "https://danielcwq.com",
-    program: "Computer Science",
-    year: "2030",
-    profilePic: "/photos/daniel-ching.png",
-    instagram: "https://www.instagram.com/daniel_cwq/",
-    twitter: "https://x.com/danielchingwq",
-    linkedin: "https://www.linkedin.com/in/danching/",
-    connections: ["shayaan-azeem"],
-  },
-  {
-    id: "kevin-thomas",
-    name: "Kevin Thomas",
-    website: "https://kevinjosethomas.com",
-    program: "Computer Science",
-    profilePic: "/photos/kevin-thomas.png",
-    instagram: "https://instagram.com/kevinjosethomas",
-    twitter: "https://x.com/kevinjosethomas",
-    linkedin: "https://linkedin.com/in/kevinjosethomas",
-    connections: ["shayaan-azeem", "daniel-ching"],
-  },
-  {
-    id: "fiona-cai",
-    name: "Fiona Cai",
-    website: "https://fiona-cai.vercel.app",
-    program: "Computer Science",
-    year: "2030",
-    profilePic: "/photos/fiona-cai.jpg",
-    instagram: "https://instagram.com/fcaiona",
-    twitter: "https://x.com/fcaiona",
-    linkedin: "https://linkedin.com/in/fiona--cai",
-    connections: [],
-  },
-  {
-    id: "muhib-waqar",
-    name: "Muhib Waqar",
-    website: "https://muhibwaqar.com",
-    program: "Math/Business",
-    year: "2030",
-    profilePic: "/photos/muhib-waqar.jpg",
-    instagram: "https://instagram.com/muhibwqr",
-    twitter: "https://x.com/muhibwqr",
-    linkedin: "https://linkedin.com/muhibwaqar",
-    connections: ["shayaan-azeem"],
-  },
-  {
-    id: "aayan-rahman",
-    name: "Aayan Rahman",
-    website: "https://aayanrahman.me",
-    program: "Electrical Engineering",
-    year: "2030",
-    profilePic: "/photos/aayan-rahman.PNG",
-    instagram: "https://www.instagram.com/aayanr300/",
-    twitter: "https://x.com/aayanr07",
-    linkedin: "https://www.linkedin.com/in/aayan-rahman/",
-    connections: ["zane-beeai", "shayaan-azeem"],
-  },
-  {
-    id: "ibrahim-ansari",
-    name: "Ibrahim Ansari",
-    website: "https://ibrahimansari.ca/",
-    program: "Management Engineering",
-    year: "2030",
-    profilePic: "/photos/ibrahim-ansari.png",
-    instagram: "https://www.instagram.com/ibrahim.ansr/",
-    twitter: "https://x.com/ibrahimansr",
-    linkedin: "https://www.linkedin.com/in/ibrahim-ansari-code/",
-    connections: ["muhib-waqar"],
-  },
-  {
-    id: "pranav-marthi",
-    name: "Pranav Marthi",
-    website: "https://pranavmarthi.com",
-    program: "Software Engineering",
-    year: "2030",
-    profilePic: "/photos/pranav-marthi.png",
-    instagram: "https://www.instagram.com/pranav.marthi/",
-    twitter: "https://x.com/pranavcmarthi",
-    linkedin: "https://www.linkedin.com/in/pranav-marthi-7714a4215/",
-    connections: ["shayaan-azeem", "zane-beeai", "kevin-thomas"]
-  },
-  {
-    id: "victor-huang",
-    name: "Victor Huang",
-    website: "https://victor-huang.ca",
-    program: "Computer Science",
-    year: "2029",
-    profilePic: "/photos/victor-huang.png",
-    instagram: "https://www.instagram.com/vichua061001/",
-    linkedin: "https://www.linkedin.com/in/victor-qibin-huang/",
-    connections: ["shayaan-azeem"]
-  },
-  {
-    id: "avaansh-nanda",
-    name: "Avaansh Nanda",
-    website: "https://www.avaansh-nanda.com/",
-    program: "CFM",
-    year: "2030",
-    profilePic: "/photos/avaansh-nanda.jpg",
-    instagram: "https://www.instagram.com/avaanshnanda/",
-    linkedin: "https://www.linkedin.com/in/avaansh-nanda/",
-    connections: ["shayaan-azeem", "pranav-marthi"]
-  },
-    {
-    id: "casper-dong",
-    name: "Casper Dong",
-    website: "https://casperdong.com",
-    program: "Knowledge Integration",
-    year: "2030",
-    profilePic: "/photos/casper-dong.jpg",
-    twitter: "https://x.com/casperkeyidong",
-    linkedin: "https://www.linkedin.com/in/casper-dong-64b623207/",
-    connections: ["shayaan-azeem", "pranav-marthi", "kevin-thomas"]
-  },
-  {
-    id: "justin-wu",
-    name: "Justin Wu",
-    website: "https://justinwu.net",
-    program: "Systems Design Engineering",
-    year: "2030",
-    profilePic: "/photos/justin-wu.jpg",
-    twitter: "https://x.com/byjustinwu",
-    linkedin: "https://www.linkedin.com/in/justin-wu-171481162/",
-    connections: ["shayaan-azeem", "daniel-ching", "casper-dong", "kevin-thomas", "aayan-rahman"]
-  },
-  {
-    id: "tony-pan",
-    name: "Tony Pan",
-    website: "https://www.tony-pan.com",
-    program: "Computer Science",
-    year: "2030",
-    profilePic: "/photos/tony-pan.jpg",
-    instagram: "https://www.instagram.com/7onypan/",
-    twitter: "https://x.com/tpypan",
-    linkedin: "https://www.linkedin.com/in/tony-py-pan/",
-    connections: ["shayaan-azeem", "zane-beeai", "pranav-marthi", "casper-dong", "aayan-rahman"]
-  },
-  {
-    id: "alex-xu",
-    name: "Alex Xu",
-    website: "https://www.alexxu.ca/",
-    program: "Computer Science",
-    year: "2028",
-    profilePic: "/photos/alex-xu.jpg",
-    twitter: "https://x.com/aalex_xu",
-    linkedin: "https://www.linkedin.com/in/alex-xu7/",
-    connections: ["shayaan-azeem"]
-  },
-  {
-    id: "austin-jian",
-    name: "Austin Jian",
-    website: "https://www.austinjian.ca",
-    program: "Computer Science",
-    year: "2030",
-    profilePic: "/photos/austin-jian.jpg",
-    twitter: "https://x.com/austinjian_",
-    linkedin: "https://www.linkedin.com/in/austin-jian",
-    connections: ["shayaan-azeem"]
-  },
-  {
-    id: "abdullah-rajput",
-    name: "Abdullah Rajput",
-    website: "https://abdullahr.com",
-    program: "Software Engineering",
-    year: "2030",
-    profilePic: "/photos/abdullah-rajput.jpeg",
-    instagram: "https://www.instagram.com/abdullah.rj29/",
-    twitter: "https://x.com/abdullah_rjpt7",
-    linkedin: "https://www.linkedin.com/in/abdullahrajput1",
-    connections: ["shayaan-azeem", "pranav-marthi", "muhib-waqar"]
-  },
-  {
-    id: "demir-eren",
-    name: "Demir Eren",
-    website: "https://www.demireren.ca/",
-    program: "Management Engineering",
-    year: "2028",
-    profilePic: "/photos/demir-eren.jpg",
-    instagram: "https://www.instagram.com/demirereno/",
-    twitter: "https://x.com/demireren_",
-    linkedin: "https://www.linkedin.com/in/demireren/",
-    connections: ["shayaan-azeem", "muhib-waqar", 
-      "kevin-thomas", "justin-wu", "casper-dong", "austin-jian", "alex-xu"]
-  },
-  {
-    id: "advaith-karthikeyan",
-    name: "Advaith Karthikeyan",
-    website: "https://www.advaith.info/",
-    program: "Exchange",
-    year: "2026",
-    profilePic: "/photos/advaith.jpg",
-    instagram: "https://www.instagram.com/advaith_12/",
-    twitter: "https://x.com/advaith_12",
-    linkedin: "https://www.linkedin.com/in/advaithkarthikeyan/",
-    connections: ["shayaan-azeem", "muhib-waqar"]
-  },
-  {
-    id: "neiloy-chaudhuri",
-    name: "Neiloy Chaudhuri",
-    website: "https://neiloy.me/",
-    program: "Management Engineering",
-    year: "2028",
-    profilePic: "/photos/neiloy-chaudhuri.jpg",
-    instagram: "https://www.instagram.com/_neiloy/",
-    twitter: "https://x.com/_neiloy",
-    linkedin: "https://www.linkedin.com/in/neiloyc/",
-    connections: ["muhib-waqar", "demir-eren"]
-  },  
-  {
-    id: "parsa-ahmadnezhad",
-    name: "Parsa Ahmadnezhad",
-    website: "https://parsaa.ca",
-    program: "Mathematics",
-    profilePic: "/photos/parsa.jpg",
-    instagram: "https://instagram.com/parsa.1l",
-    twitter: "https://x.com/parsaxa",
-    linkedin: "https://linkedin.com/in/parsa-ahmadnezhad",
-    connections: ["kevin-thomas", "shayaan-azeem", "casper-dong", "abdullah-rajput", "pranav-marthi", "aayan-rahman", "fiona-cai"]
-  },
-  {
-    id: "ricky-tang",
-    name: "Ricky Tang",
-    website: "https://rickytang.dev",
-    program: "Software Engineering",
-    year: "2030",
-    profilePic: "/photos/ricky-tang.jpg",
-    instagram: "https://www.instagram.com/rickytang.dev/",
-    twitter: "https://x.com/_rickytang",
-    linkedin: "https://www.linkedin.com/in/ricky-tang-dev/",
-    connections: ["abdullah-rajput", "muhib-waqar"]
-  },
   // ============================================
-
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
@@ -330,7 +69,7 @@ export const members: Member[] = [
 // Helper to get all connections for the network graph
 export function getConnections(): Connection[] {
   const connections: Connection[] = [];
-  
+
   members.forEach(member => {
     if (member.connections) {
       member.connections.forEach(targetId => {
@@ -344,7 +83,7 @@ export function getConnections(): Connection[] {
       });
     }
   });
-  
+
   return connections;
 }
 
@@ -354,10 +93,10 @@ export function getWebringNavigation(currentWebsite: string): { prev: Member | n
   if (index === -1) {
     return { prev: null, next: null };
   }
-  
+
   const prevIndex = (index - 1 + members.length) % members.length;
   const nextIndex = (index + 1) % members.length;
-  
+
   return {
     prev: members[prevIndex],
     next: members[nextIndex],

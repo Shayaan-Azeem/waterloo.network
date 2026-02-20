@@ -2,7 +2,7 @@ import { ImageResponse } from 'next/og';
 
 export const runtime = 'edge';
 
-export const alt = 'uwaterloo.network';
+export const alt = 'uhouston.network';
 export const size = {
   width: 1200,
   height: 630,
@@ -50,7 +50,7 @@ export default async function Image() {
             />
           </svg>
         </div>
-        
+
         {/* Main Content */}
         <div
           style={{
@@ -64,10 +64,10 @@ export default async function Image() {
           }}
         >
           <div style={{ fontSize: 72, fontWeight: 500, letterSpacing: -2 }}>
-            uwaterloo.network
+            uhouston.network
           </div>
           <div style={{ fontSize: 28, color: '#888888', marginTop: 16 }}>
-            a webring for uwaterloo students
+            a webring for university of houston students
           </div>
         </div>
       </div>
