@@ -62,6 +62,13 @@ export const members: Member[] = [
   // },
 
   // ============================================
+    {
+    id: "sami-hamdalla",
+    name: "Sami Hamdalla",
+    website: "https://www.linkedin.com/in/sami-hamdalla/",
+    program: "computer science",
+    year: "2026",
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];

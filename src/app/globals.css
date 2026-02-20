@@ -762,3 +762,262 @@ a {
     grid-template-columns: 1fr;
   }
 }
+
+/* ========== Admin Page ========== */
+.admin-page {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Inter', sans-serif;
+  display: flex;
+  justify-content: center;
+  padding: 3rem 2rem;
+}
+
+.admin-login {
+  text-align: center;
+  margin-top: 20vh;
+}
+
+.admin-login h1 {
+  font-size: 3rem;
+  margin-bottom: 1.5rem;
+}
+
+.admin-login form {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.admin-password-input {
+  padding: 0.65rem 1rem;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  background: var(--input-bg);
+  color: var(--foreground);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  outline: none;
+  width: 220px;
+  transition: border-color 0.2s;
+}
+
+.admin-password-input:focus {
+  border-color: var(--hover-color);
+}
+
+.admin-login-btn {
+  padding: 0.65rem 1.25rem;
+  font-size: 0.9rem;
+  font-family: 'Inter', sans-serif;
+  background: var(--foreground);
+  color: var(--background);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background 0.2s;
+}
+
+.admin-login-btn:hover:not(:disabled) {
+  background: var(--hover-color);
+}
+
+.admin-error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  margin-top: 0.75rem;
+}
+
+.admin-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.admin-header {
+  display: flex;
+  align-items: baseline;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.admin-header h1 {
+  font-size: 1.75rem;
+  font-weight: 500;
+}
+
+.admin-count {
+  font-size: 0.9rem;
+  color: var(--secondary);
+}
+
+.admin-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: var(--secondary);
+  font-size: 1.1rem;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th {
+  font-size: 0.8rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--secondary);
+  padding: 0.75rem 1rem 0.75rem 0;
+  border-bottom: 1px solid var(--border);
+}
+
+.admin-table td {
+  padding: 1rem 1rem 1rem 0;
+  font-size: 0.95rem;
+  border-bottom: 1px solid var(--border-light);
+  vertical-align: middle;
+}
+
+.admin-table tbody tr:hover {
+  background: var(--hover-bg);
+}
+
+.admin-name {
+  font-weight: 500;
+}
+
+.admin-link {
+  color: var(--hover-color);
+  text-decoration: none;
+}
+
+.admin-link:hover {
+  text-decoration: underline;
+}
+
+.admin-date {
+  color: var(--secondary);
+  font-size: 0.85rem;
+}
+
+.admin-actions {
+  display: flex;
+  gap: 0.4rem;
+}
+
+.admin-btn {
+  width: 32px;
+  height: 32px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s;
+  background: var(--input-bg);
+  color: var(--foreground);
+}
+
+.admin-btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+}
+
+.admin-btn-approve:hover:not(:disabled) {
+  background: #16a34a;
+  border-color: #16a34a;
+  color: #fff;
+}
+
+.admin-btn-reject:hover:not(:disabled) {
+  background: #dc2626;
+  border-color: #dc2626;
+  color: #fff;
+}
+
+@media (max-width: 640px) {
+  .admin-page {
+    padding: 1.5rem 1rem;
+  }
+
+  .admin-table th,
+  .admin-table td {
+    padding: 0.6rem 0.5rem 0.6rem 0;
+    font-size: 0.85rem;
+  }
+}
+
+/* Admin Tabs */
+.admin-tabs {
+  display: flex;
+  gap: 0.25rem;
+  margin-left: auto;
+}
+
+.admin-tab {
+  padding: 0.4rem 0.9rem;
+  font-size: 0.85rem;
+  font-family: 'Inter', sans-serif;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--secondary);
+  transition: all 0.15s;
+}
+
+.admin-tab:hover {
+  color: var(--foreground);
+}
+
+.admin-tab.active {
+  background: var(--foreground);
+  color: var(--background);
+  border-color: var(--foreground);
+}
+
+.admin-btn-edit:hover:not(:disabled) {
+  background: var(--hover-color);
+  border-color: var(--hover-color);
+  color: #fff;
+}
+
+/* Edit form inside modal */
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.edit-actions {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.admin-cancel-btn {
+  padding: 0.75rem 1.5rem;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  background: none;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  cursor: pointer;
+  color: var(--secondary);
+  transition: all 0.15s;
+}
+
+.admin-cancel-btn:hover {
+  color: var(--foreground);
+  border-color: var(--foreground);
+}
