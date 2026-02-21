@@ -1,13 +1,13 @@
 /**
  * UHOUSTON WEBRING MEMBERS
- * 
+ *
  * To add yourself to the webring, visit the join page at uhouston.network/join
- * 
+ *
  * Required fields:
  * - id: Your name with hyphens (e.g., "john-doe")
  * - name: Your full name
  * - website: Your personal website URL (required to be part of the webring!)
- * 
+ *
  * Optional fields:
  * - program: Your program/major at UH
  * - year: Your graduation year
@@ -16,7 +16,7 @@
  * - twitter: Full URL to your Twitter/X profile
  * - linkedin: Full URL to your LinkedIn profile
  * - connections: Names of friends with hyphens (e.g., ["john-doe", "jane-smith"])
- * 
+ *
  * ADDING YOUR PROFILE PICTURE:
  * 1. Use a square image, ideally 400x400 pixels (your Twitter/X profile pic works great!)
  * 2. Save it as: public/photos/your-name.jpg (or .png)
@@ -62,12 +62,22 @@ export const members: Member[] = [
   // },
 
   // ============================================
-    {
+  {
     id: "sami-hamdalla",
     name: "Sami Hamdalla",
     website: "https://www.linkedin.com/in/sami-hamdalla/",
-    program: "computer science",
+    program: "Computer Science",
     year: "2026",
+  },
+  {
+    id: "yusuf-khan",
+    name: "Yusuf Khan",
+    website: "https://www.linkedin.com/in/yusufkh/",
+    program: "Computer Science",
+    year: "2026",
+    twitter: "https://x.com/Ymkhan0",
+    linkedin: "https://www.linkedin.com/in/yusufkh/",
+    connections: ["sami-hamdalla", "sami-hamdalla"],
   },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
@@ -77,11 +87,11 @@ export const members: Member[] = [
 export function getConnections(): Connection[] {
   const connections: Connection[] = [];
 
-  members.forEach(member => {
+  members.forEach((member) => {
     if (member.connections) {
-      member.connections.forEach(targetId => {
+      member.connections.forEach((targetId) => {
         // Only add connection if target member exists
-        if (members.some(m => m.id === targetId)) {
+        if (members.some((m) => m.id === targetId)) {
           connections.push({
             fromId: member.id,
             toId: targetId,
@@ -95,8 +105,11 @@ export function getConnections(): Connection[] {
 }
 
 // Helper to get the next and previous members for webring navigation
-export function getWebringNavigation(currentWebsite: string): { prev: Member | null; next: Member | null } {
-  const index = members.findIndex(m => m.website === currentWebsite);
+export function getWebringNavigation(currentWebsite: string): {
+  prev: Member | null;
+  next: Member | null;
+} {
+  const index = members.findIndex((m) => m.website === currentWebsite);
   if (index === -1) {
     return { prev: null, next: null };
   }
