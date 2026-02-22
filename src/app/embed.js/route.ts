@@ -103,13 +103,13 @@ export async function GET() {
                     width: 56px;
                     height: 56px;
                     background-color: \${embedCustomColor};
-                    mask: url(\${baseUrl}/icon.svg) center/contain no-repeat;
-                    -webkit-mask: url(\${baseUrl}/icon.svg) center/contain no-repeat;
+                    mask: url(\${baseUrl}/favicon.png) center/contain no-repeat;
+                    -webkit-mask: url(\${baseUrl}/favicon.png) center/contain no-repeat;
                 \`;
                 centerLink.appendChild(iconWrapper);
             } else {
                 const colorMap = {
-                    'black': '/icon.svg',
+                    'black': '/favicon.png',
                     'red': '/iconred.svg',
                     'yellow': '/iconyellow.svg',
                     'white': '/iconwhite.svg'

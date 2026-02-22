@@ -207,7 +207,7 @@ export default function NetworkGraph({ members, connections, highlightedMemberId
             nodeDiv.style.transition = 'left 0.5s ease, top 0.5s ease, transform 0.5s ease';
 
             const img = document.createElement('img');
-            img.src = node.profilePic || '/icon.svg';
+            img.src = node.profilePic || '/favicon.png';
             img.style.width = '32px';
             img.style.height = '32px';
             img.style.borderRadius = '50%';

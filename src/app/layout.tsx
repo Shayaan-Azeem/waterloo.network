@@ -17,17 +17,26 @@ export const metadata: Metadata = {
   title: "uhouston.network",
   description: "A webring for University of Houston students",
   icons: {
-    icon: '/favicon.svg',
+    icon: '/favicon.png',
   },
   openGraph: {
     title: "uhouston.network",
     description: "A webring for University of Houston students",
     type: 'website',
+    images: [
+      {
+        url: 'https://www.uhouston.network/front1.png',
+        width: 1200,
+        height: 630,
+        alt: 'uhouston.network',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: "uhouston.network",
     description: "A webring for University of Houston students",
+    images: ['https://www.uhouston.network/front1.png'],
   },
 };
 
