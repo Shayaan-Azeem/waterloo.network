@@ -22,10 +22,12 @@ export const metadata: Metadata = {
   openGraph: {
     title: "uhouston.network",
     description: "A webring for University of Houston students",
+    url: 'https://uhouston-network.vercel.app/',
+    siteName: 'uhouston.network',
     type: 'website',
     images: [
       {
-        url: 'https://www.uhouston.network/thumb.png',
+        url: 'https://uhouston-network.vercel.app//thumb.png',
         width: 1280,
         height: 720,
         alt: 'uhouston.network',
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: "uhouston.network",
     description: "A webring for University of Houston students",
-    images: ['https://www.uhouston.network/thumb.png'],
+    images: ['https://uhouston-network.vercel.app//thumb.png'],
   },
 };
 
