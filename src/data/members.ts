@@ -443,6 +443,19 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/rghv-agrwl/",
     connections: ["shayaan-azeem", "justin-wu", "casper-dong"],
   },
+  {
+    id: "ammar-adam",
+    name: "Ammar Adam",
+    website: "https://ammaradam.com/",
+    program: "CS & Finance",
+    roles: ["software", "product", "finance"],
+    verticals: ["fintech", "consumer", "ai"],
+    profilePic: "/photos/ammar-adam.jpg",
+    twitter: "https://x.com/ammaradam_5807?s=11",
+    instagram: "https://www.instagram.com/ammar_adam587/",
+    linkedin: "https://www.linkedin.com/in/ammar-adam/",
+    connections: ["shayaan-azeem", "pranav-marthi", "avaansh-nanda", "muhib-waqar"],
+  },
   // ============================================
 
   // ADD YOUR ENTRY ABOVE THIS LINE
