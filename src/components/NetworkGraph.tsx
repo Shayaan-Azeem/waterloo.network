@@ -8,6 +8,7 @@ interface NetworkGraphProps {
     connections: Connection[];
     highlightedMemberIds?: string[];
     searchQuery?: string;
+    membersWithoutEmbed?: Set<string>;
 }
 
 interface Node {
@@ -19,7 +20,7 @@ interface Node {
     y: number;
 }
 
-export default function NetworkGraph({ members, connections, highlightedMemberIds = [], searchQuery = '' }: NetworkGraphProps) {
+export default function NetworkGraph({ members, connections, highlightedMemberIds = [], searchQuery = '', membersWithoutEmbed = new Set() }: NetworkGraphProps) {
     const containerRef = useRef<HTMLDivElement>(null);
     const svgRef = useRef<SVGSVGElement | null>(null);
     const nodesRef = useRef<Node[]>([]);
@@ -149,14 +150,17 @@ export default function NetworkGraph({ members, connections, highlightedMemberId
                 const img = nodeDiv.querySelector('img');
                 if (img) {
                     const isHighlighted = highlightedMemberIds.length === 0 || highlightedMemberIds.includes(node.id);
+                    const hasNoEmbed = membersWithoutEmbed.has(node.id);
+                    const baseOpacity = hasNoEmbed ? '0.5' : '1';
                     if (searchQuery && isHighlighted) {
                         img.style.filter = 'grayscale(0%)';
+                        img.style.opacity = baseOpacity;
                     } else if (searchQuery && !isHighlighted) {
                         img.style.filter = 'grayscale(100%)';
                         img.style.opacity = '0.3';
                     } else {
                         img.style.filter = 'grayscale(100%)';
-                        img.style.opacity = '1';
+                        img.style.opacity = baseOpacity;
                     }
                 }
             }
@@ -206,6 +210,7 @@ export default function NetworkGraph({ members, connections, highlightedMemberId
             nodeDiv.style.userSelect = 'none';
             nodeDiv.style.transition = 'left 0.5s ease, top 0.5s ease, transform 0.5s ease';
 
+            const hasNoEmbed = membersWithoutEmbed.has(node.id);
             const img = document.createElement('img');
             img.src = node.profilePic || '/icon.svg';
             img.style.width = '32px';
@@ -217,6 +222,10 @@ export default function NetworkGraph({ members, connections, highlightedMemberId
             img.style.display = 'block';
             img.draggable = false;
             img.style.transition = 'filter 0.3s ease, opacity 0.3s ease';
+            // Apply 50% opacity for members without embed
+            if (hasNoEmbed) {
+                img.style.opacity = '0.5';
+            }
 
             const nameLabel = document.createElement('div');
             nameLabel.textContent = node.name || 'Unknown';
@@ -246,15 +255,16 @@ export default function NetworkGraph({ members, connections, highlightedMemberId
 
             nodeDiv.addEventListener('mouseleave', () => {
                 const isHighlighted = highlightedMemberIds.length === 0 || highlightedMemberIds.includes(node.id);
+                const baseOpacity = hasNoEmbed ? '0.5' : '1';
                 if (searchQuery && isHighlighted) {
                     img.style.filter = 'grayscale(0%)';
-                    img.style.opacity = '1';
+                    img.style.opacity = baseOpacity;
                 } else if (searchQuery && !isHighlighted) {
                     img.style.filter = 'grayscale(100%)';
                     img.style.opacity = '0.3';
                 } else {
                     img.style.filter = 'grayscale(100%)';
-                    img.style.opacity = '1';
+                    img.style.opacity = baseOpacity;
                 }
                 nameLabel.style.opacity = '0';
             });
@@ -390,7 +400,7 @@ export default function NetworkGraph({ members, connections, highlightedMemberId
             document.removeEventListener('mousemove', handleMouseMove);
             document.removeEventListener('mouseup', handleMouseUp);
         };
-    }, [members, connections, isDark, zoomLevel, panOffset]);
+    }, [members, connections, isDark, zoomLevel, panOffset, membersWithoutEmbed]);
 
     return (
         <div 

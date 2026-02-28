@@ -6,9 +6,10 @@ import { FaXTwitter } from 'react-icons/fa6';
 interface MembersTableProps {
     members: Member[];
     searchQuery?: string;
+    membersWithoutEmbed?: Set<string>;
 }
 
-export default function MembersTable({ members, searchQuery }: MembersTableProps) {
+export default function MembersTable({ members, searchQuery, membersWithoutEmbed = new Set() }: MembersTableProps) {
     const highlightText = (text: string | null | undefined) => {
         if (!text || !searchQuery) return text || '';
         
@@ -39,8 +40,10 @@ export default function MembersTable({ members, searchQuery }: MembersTableProps
                     </tr>
                 </thead>
                 <tbody>
-                    {members.map((member, index) => (
-                        <tr key={member.id}>
+                    {members.map((member, index) => {
+                        const hasNoEmbed = membersWithoutEmbed.has(member.id);
+                        return (
+                        <tr key={member.id} style={hasNoEmbed ? { opacity: 0.5 } : undefined}>
                             <td className="user-cell">
                                 {member.profilePic ? (
                                     <img 
@@ -123,7 +126,8 @@ export default function MembersTable({ members, searchQuery }: MembersTableProps
                                 </div>
                             </td>
                         </tr>
-                    ))}
+                        );
+                    })}
                 </tbody>
             </table>
         </div>

@@ -5,7 +5,6 @@ import { Member, Connection, ROLE_OPTIONS, VERTICAL_OPTIONS } from '@/data/membe
 import MembersTable from './MembersTable';
 import NetworkGraph from './NetworkGraph';
 import AsciiBackground from './AsciiBackground';
-import EmbedcheckTable from './EmbedcheckTable';
 import { Search, ChevronDown, ChevronUp, X } from 'lucide-react';
 
 function shuffleArray<T>(array: T[]): T[] {
@@ -17,6 +16,12 @@ function shuffleArray<T>(array: T[]): T[] {
     return shuffled;
 }
 
+interface EmbedFailure {
+    id: string;
+    name: string;
+    reason: string;
+    url: string;
+}
 
 interface SearchableContentProps {
     members: Member[];
@@ -29,10 +34,25 @@ export default function SearchableContent({ members, connections }: SearchableCo
     const [activeRoles, setActiveRoles] = useState<Set<string>>(new Set());
     const [activeVerticals, setActiveVerticals] = useState<Set<string>>(new Set());
     const [showFilters, setShowFilters] = useState(false);
+    const [membersWithoutEmbed, setMembersWithoutEmbed] = useState<Set<string>>(new Set());
 
+    // Fetch embed check data
     useEffect(() => {
-        setShuffledMembers(shuffleArray(members));
-    }, [members]);
+        fetch('/api/embedcheck')
+            .then(res => res.json())
+            .then(data => {
+                const failedIds = new Set<string>(data.failures?.map((f: EmbedFailure) => f.id) || []);
+                setMembersWithoutEmbed(failedIds);
+            })
+            .catch(err => console.error('Failed to fetch embed check:', err));
+    }, []);
+
+    // Shuffle members but keep those without embed at the bottom
+    useEffect(() => {
+        const withEmbed = members.filter(m => !membersWithoutEmbed.has(m.id));
+        const withoutEmbed = members.filter(m => membersWithoutEmbed.has(m.id));
+        setShuffledMembers([...shuffleArray(withEmbed), ...shuffleArray(withoutEmbed)]);
+    }, [members, membersWithoutEmbed]);
 
     const hasActiveFilters = activeRoles.size > 0 || activeVerticals.size > 0;
 
@@ -129,7 +149,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
                 </div>
 
                 <div className="table-section">
-                    <MembersTable members={filteredMembers} searchQuery={searchQuery} />
+                    <MembersTable members={filteredMembers} searchQuery={searchQuery} membersWithoutEmbed={membersWithoutEmbed} />
                 </div>
             </div>
 
@@ -211,8 +231,8 @@ export default function SearchableContent({ members, connections }: SearchableCo
                     connections={connections} 
                     highlightedMemberIds={filteredMembers.map(m => m.id)}
                     searchQuery={searchQuery}
+                    membersWithoutEmbed={membersWithoutEmbed}
                 />
-                <EmbedcheckTable />
             </div>
         </main>
     );
