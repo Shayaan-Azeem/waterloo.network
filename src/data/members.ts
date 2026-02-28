@@ -450,7 +450,7 @@ export const members: Member[] = [
     program: "CS & Finance",
     roles: ["software", "product", "finance"],
     verticals: ["fintech", "consumer", "ai"],
-    profilePic: "/photos/ammar-adam.png",
+    profilePic: "/photos/ammar-adam.jpg",
     twitter: "https://x.com/ammaradam_5807?s=11",
     instagram: "https://www.instagram.com/ammar_adam587/",
     linkedin: "https://www.linkedin.com/in/ammar-adam/",
