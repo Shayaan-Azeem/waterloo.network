@@ -2,7 +2,7 @@
   "crons": [
     {
       "path": "/api/embedcheck",
-      "schedule": "*/30 * * * *"
+      "schedule": "0 0 * * *"
     }
   ]
 }
