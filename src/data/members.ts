@@ -443,6 +443,22 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/rghv-agrwl/",
     connections: ["shayaan-azeem", "justin-wu", "casper-dong"],
   },
+  {
+    id: "owen-li",
+    name: "Owen Li",
+    website: "https://owenli.ca/",
+    program: "Management Engineering",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["engineering", "product"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "consumer", "fintech"],
+    profilePic: "/photos/owen-li.jpg",
+    instagram: "https://www.instagram.com/oweniscool69/",
+    twitter: "https://x.com/Owenlingling",
+    linkedin: "https://www.linkedin.com/in/owen-li-waterloo/",
+    connections: ["ibrahim-ansari", "justin-wu", "avaansh-nanda"]
+  },
   // ============================================
 
   // ADD YOUR ENTRY ABOVE THIS LINE
