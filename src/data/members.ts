@@ -458,7 +458,22 @@ export const members: Member[] = [
     connections: ["ibrahim-ansari", "justin-wu", "avaansh-nanda"]
   },
   // ============================================
-
+  {
+    id: "isha-shenoy",
+    name: "Isha Shenoy",
+    website: "https://ishashenoy.dev/",
+    program: "Management Engineering",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["software", "product"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "consumer", "saas"],
+    profilePic: "/photos/isha-shenoy.png",
+    instagram: "https://www.instagram.com/ishas_14/",
+    twitter: "https://x.com/ichiberries",
+    linkedin: "https://www.linkedin.com/in/ishashenoy/",
+    connections: []
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
