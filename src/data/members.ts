@@ -474,6 +474,22 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/ishashenoy/",
     connections: []
   },
+  {
+     id: "matthew-petersen",
+     name: "Matthew Petersen",
+     website: "https://matthewpetersen.ca",
+     program: "Systems Design Engineering",
+     year: "2030",
+     // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+     roles: ["engineering", "design", "product"],
+     // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+     verticals: ["ai", "saas", "consumer"],
+     profilePic: "/photos/matthew-petersen.png",
+     instagram: "https://instagram.com/mxtthewpetersen",
+     twitter: "https://x.com/mmptrsn",
+     linkedin: "https://linkedin.com/in/petersen-matthew",
+     connections: ["justin-wu", "raghav-agarwal", "shayaan-azeem"],
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
