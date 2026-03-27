@@ -77,6 +77,7 @@ export const members: Member[] = [
     verticals: ["ai", "saas"],
     profilePic: "/photos/mubarak-piracha.jpg",
     instagram: "https://www.instagram.com/mpsdailyday/",
+    twitter: "https://x.com/mubarkparacha",
     linkedin: "https://www.linkedin.com/in/mubarak-ali-piracha-063a58384",
     connections: ["shayaan-azeem", "muhib-waqar", "pranav-marthi"],
   },
