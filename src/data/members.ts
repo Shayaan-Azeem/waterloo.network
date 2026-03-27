@@ -67,6 +67,20 @@ export const members: Member[] = [
   // ADD YOUR ENTRY BELOW THIS LINE
   // ============================================
 
+  {
+    id: "mubarak-piracha",
+    name: "Mubarak Ali Piracha",
+    website: "https://mubarakpiracha.xyz",
+    program: "Computational Mathematics",
+    year: "2030",
+    roles: ["engineering", "ai/ml", "software"],
+    verticals: ["ai", "saas"],
+    profilePic: "/photos/mubarak-piracha.jpg",
+    instagram: "https://www.instagram.com/mpsdailyday/",
+    linkedin: "https://www.linkedin.com/in/mubarak-ali-piracha-063a58384",
+    connections: ["shayaan-azeem", "muhib-waqar", "pranav-marthi"],
+  },
+
   // Example entry (copy this as a template):
   // {
   //   id: "john-doe",
