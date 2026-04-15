@@ -86,6 +86,19 @@ export const members: Member[] = [
   // },
 
   {
+    id: "zain-khalil",
+    name: "Zain Khalil",
+    website: "https://zainkhalil.ca",
+    program: "CS/BBA",
+    roles: [],
+    verticals: [],
+    profilePic: "/photos/zain-khalil.jpg",
+    instagram: "https://www.instagram.com/zain.sabry/",
+    linkedin: "https://www.linkedin.com/in/zainskhalil/",
+    connections: ["avaansh-nanda", "isha-shenoy"],
+  },
+
+  {
     id: "shayaan-azeem",
     name: "Shayaan Azeem",
     website: "https://shayaanazeem.com",
