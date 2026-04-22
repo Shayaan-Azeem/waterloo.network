@@ -474,6 +474,20 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/ishashenoy/",
     connections: []
   },
+  {
+    id: "anahat-chhatwal",
+    name: "Anahat Chhatwal",
+    website: "https://anahat-chhatwal.vercel.app/",
+    program: "Computer Science and Business Administration",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["software", "product", "engineering", "design"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "consumer", "saas", "fintech", "creator tools"],
+    profilePic: "/photos/anahat-chhatwal.png",
+    linkedin: "https://www.linkedin.com/in/anahat-kc/",
+    connections: ["shayaan-azeem"]
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
