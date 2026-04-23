@@ -474,6 +474,21 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/ishashenoy/",
     connections: []
   },
+  {
+    id: "vidu-widyalankara",
+    name: "Vidu Widyalankara",
+    website: "https://vidsterbroyo.com/",
+    program: "Computer Science",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["engineering", "ai/ml", "software"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["fintech", "ai", "saas", "climate", "robotics"],
+    profilePic: "/photos/vidu-widyalankara.jpg",
+    twitter: "https://x.com/vidsterbroyo",
+    linkedin: "https://www.linkedin.com/in/viduw/",
+    connections: ["anahat-chhatwal", "victor-huang", "abdullah-rajput", "fiona-cai"]
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
