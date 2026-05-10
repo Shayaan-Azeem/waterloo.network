@@ -86,6 +86,17 @@ export const members: Member[] = [
   // },
 
   {
+    id: "yohance-pawania",
+    name: "Yohance Pawania",
+    website: "https://yohancepawania.dev",
+    program: "Computer Science",
+    year: "2031",
+    profilePic: "/photos/yohance-pawania.png",
+    twitter: "https://x.com/ypawania_",
+    linkedin: "https://www.linkedin.com/in/yohance-pawania-30aa902a4/",
+    connections: ["fiona-cai", "shayaan-azeem", "zane-beeai", "casper-dong", "aayan-rahman", "tony-pan"],
+  },
+  {
     id: "shayaan-azeem",
     name: "Shayaan Azeem",
     website: "https://shayaanazeem.com",
