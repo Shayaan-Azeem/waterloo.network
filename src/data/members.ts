@@ -474,6 +474,22 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/ishashenoy/",
     connections: []
   },
+  {
+  id: "ayaan-faisal",
+  name: "Ayaan Faisal",
+  website: "https://ayaanfaisal.com",
+  program: "Honours Mathematics",
+  year: "2030",
+  // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+  roles: ["software", "ai", "data science"],
+  // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+  verticals: ["fintech", "ai"],
+  profilePic: "/photos/ayaan-faisal.png",
+  instagram: "https://instagram.com/ayaan.visuals",
+  twitter: "https://x.com/ayaanyyz",
+  linkedin: "https://linkedin.com/in/ayaanfaisal18",
+  connections: ["shayaan-azeem", "avaansh-nanda", "muhib-waqar", "aayan-rahman"],
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
