@@ -484,7 +484,7 @@ export const members: Member[] = [
     roles: ["software", "product", "engineering", "design"],
     // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
     verticals: ["ai", "consumer", "saas", "fintech", "creator tools"],
-    profilePic: "/photos/anahat-chhatwal.png",
+    profilePic: "/photos/anahat-chhatwal.jpg",
     linkedin: "https://www.linkedin.com/in/anahat-kc/",
     connections: ["shayaan-azeem"]
   },
