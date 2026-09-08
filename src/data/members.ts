@@ -666,6 +666,20 @@ export const members: Member[] = [
     connections: ["shayaan-azeem"]
   },
   {
+    id: "caleb-bellsmith",
+    name: "Caleb Bellsmith",
+    website: "https://calebbellsmith.github.io/",
+    program: "Biomedical Engineering",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["hardware", "product", "engineering", "design"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["robotics", "defense", "healthcare", "hard tech"],
+    profilePic: "/photos/caleb-bellsmith.jpg",
+    linkedin: "https://www.linkedin.com/in/calebbellsmithuw/",
+    connections: ["zane-beeai"],
+  },
+  {
     id: "jinay-patel",
     name: "Jinay Patel",
     website: "https://jinay-patel.vercel.app/",
