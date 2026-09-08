@@ -150,7 +150,7 @@ export const members: Member[] = [
   {
     id: "yohance-pawania",
     name: "Yohance Pawania",
-    website: "https://yohancepawania.dev",
+    website: "https://yohancepawania.com",
     program: "Computer Science",
     year: "2031",
     profilePic: "/photos/yohance-pawania.png",
