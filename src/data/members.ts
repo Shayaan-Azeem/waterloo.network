@@ -727,7 +727,7 @@ export const members: Member[] = [
     twitter: "https://x.com/ammaradam_5807?s=11",
     instagram: "https://www.instagram.com/ammar_adam587/",
     linkedin: "https://www.linkedin.com/in/ammar-adam/",
-    connections: ["shayaan-azeem", "pranav-marthi", "avaansh-nanda", "muhib-waqar"],
+    connections: ["shayaan-azeem", "pranav-marthi", "avaansh-nanda", "muhib-waqar", "abdullah-rajput"],
   },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
