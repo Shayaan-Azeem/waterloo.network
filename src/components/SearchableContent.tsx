@@ -1,6 +1,7 @@
 'use client';
 
 import React, { useState, useEffect, useMemo } from 'react';
+import { useSearchParams } from 'next/navigation';
 import { Member, Connection, ROLE_OPTIONS, VERTICAL_OPTIONS } from '@/data/members';
 import MembersTable from './MembersTable';
 import NetworkGraph from './NetworkGraph';
@@ -29,12 +30,26 @@ interface SearchableContentProps {
 }
 
 export default function SearchableContent({ members, connections }: SearchableContentProps) {
+    const searchParams = useSearchParams();
+    const referrerId = searchParams.get('ref');
+
     const [searchQuery, setSearchQuery] = useState('');
     const [shuffledMembers, setShuffledMembers] = useState<Member[]>(members);
     const [activeRoles, setActiveRoles] = useState<Set<string>>(new Set());
     const [activeVerticals, setActiveVerticals] = useState<Set<string>>(new Set());
     const [showFilters, setShowFilters] = useState(false);
     const [membersWithoutEmbed, setMembersWithoutEmbed] = useState<Set<string>>(new Set());
+
+    const referrerMember = useMemo(
+        () => (referrerId ? members.find(m => m.id === referrerId) ?? null : null),
+        [referrerId, members]
+    );
+
+    const referrerDullIds = useMemo(() => {
+        if (!referrerMember) return new Set<string>();
+        const circle = new Set([referrerMember.id, ...(referrerMember.connections || [])]);
+        return new Set(members.filter(m => !circle.has(m.id)).map(m => m.id));
+    }, [referrerMember, members]);
 
     // Fetch embed check data
     useEffect(() => {
@@ -47,12 +62,23 @@ export default function SearchableContent({ members, connections }: SearchableCo
             .catch(err => console.error('Failed to fetch embed check:', err));
     }, []);
 
-    // Shuffle members but keep those without embed at the bottom
+    // Shuffle members, keeping embed-less at bottom and referrer + connections at top
     useEffect(() => {
-        const withEmbed = members.filter(m => !membersWithoutEmbed.has(m.id));
-        const withoutEmbed = members.filter(m => membersWithoutEmbed.has(m.id));
-        setShuffledMembers([...shuffleArray(withEmbed), ...shuffleArray(withoutEmbed)]);
-    }, [members, membersWithoutEmbed]);
+        const sortGroup = (arr: Member[]) => {
+            const withEmbed = arr.filter(m => !membersWithoutEmbed.has(m.id));
+            const withoutEmbed = arr.filter(m => membersWithoutEmbed.has(m.id));
+            return [...shuffleArray(withEmbed), ...shuffleArray(withoutEmbed)];
+        };
+
+        if (referrerMember) {
+            const connectionIds = new Set(referrerMember.connections || []);
+            const connectionsGroup = members.filter(m => connectionIds.has(m.id) && m.id !== referrerMember.id);
+            const rest = members.filter(m => m.id !== referrerMember.id && !connectionIds.has(m.id));
+            setShuffledMembers([referrerMember, ...sortGroup(connectionsGroup), ...sortGroup(rest)]);
+        } else {
+            setShuffledMembers(sortGroup(members));
+        }
+    }, [members, membersWithoutEmbed, referrerMember]);
 
     const hasActiveFilters = activeRoles.size > 0 || activeVerticals.size > 0;
 
@@ -125,7 +151,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
             <div className="content-wrapper">
                 <div className="header-section">
                     <div className="title-row">
-                        <h1 className="title">uwaterloo.network</h1>
+                        <a href="/" className="title" style={{ textDecoration: 'none', color: 'inherit' }}>uwaterloo.network</a>
                     </div>
                     <div className="description">
                         <p>welcome to the official webring for university of waterloo students.</p>
@@ -149,7 +175,7 @@ export default function SearchableContent({ members, connections }: SearchableCo
                 </div>
 
                 <div className="table-section">
-                    <MembersTable members={filteredMembers} searchQuery={searchQuery} membersWithoutEmbed={membersWithoutEmbed} />
+                    <MembersTable members={filteredMembers} searchQuery={searchQuery} membersWithoutEmbed={membersWithoutEmbed} referrerDullIds={referrerDullIds} />
                 </div>
             </div>
 
@@ -230,12 +256,13 @@ export default function SearchableContent({ members, connections }: SearchableCo
                     )}
                 </div>
 
-                <NetworkGraph 
-                    members={members} 
-                    connections={connections} 
+                <NetworkGraph
+                    members={members}
+                    connections={connections}
                     highlightedMemberIds={filteredMembers.map(m => m.id)}
                     searchQuery={searchQuery}
                     membersWithoutEmbed={membersWithoutEmbed}
+                    referrerDullIds={referrerDullIds}
                 />
             </div>
         </main>

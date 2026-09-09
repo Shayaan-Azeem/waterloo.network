@@ -1,17 +1,17 @@
 /**
  * UWATERLOO WEBRING MEMBERS
- * 
+ *
  * To add yourself to the webring:
  * 1. Fork this repository
  * 2. Add your profile picture to /public/photos/ (see below)
  * 3. Add your entry to the members array below
  * 4. Submit a pull request
- * 
+ *
  * Required fields:
  * - id: Your name with hyphens (e.g., "john-doe")
  * - name: Your full name
  * - website: Your personal website URL (required to be part of the webring!)
- * 
+ *
  * Optional fields:
  * - program: Your program at UWaterloo
  * - year: Your graduation year
@@ -24,14 +24,12 @@
  * - twitter: Full URL to your Twitter/X profile
  * - linkedin: Full URL to your LinkedIn profile
  * - connections: Names of friends with hyphens (e.g., ["john-doe", "jane-smith"])
- * 
+ *
  * ADDING YOUR PROFILE PICTURE:
  * 1. Use a square image, ideally 400x400 pixels (your Twitter/X profile pic works great!)
  * 2. Save it as: public/photos/your-name.jpg (or .png)
  * 3. Set profilePic to: "/photos/your-name.jpg"
  */
-
-import { errorToJSON } from "next/dist/server/render";
 
 export interface Member {
   id: string;
@@ -49,13 +47,32 @@ export interface Member {
 }
 
 export const ROLE_OPTIONS = [
-  'engineering', 'design', 'product', 'growth', 'ai/ml', 'research',
-  'hardware', 'quant', 'software', 'finance', 'vc',
+  "engineering",
+  "design",
+  "product",
+  "growth",
+  "ai/ml",
+  "research",
+  "hardware",
+  "quant",
+  "software",
+  "finance",
+  "vc",
 ] as const;
 
 export const VERTICAL_OPTIONS = [
-  'fintech', 'ai', 'climate', 'healthcare', 'edtech', 'marketplaces',
-  'robotics', 'defense', 'hard tech', 'saas', 'consumer', 'creator tools',
+  "fintech",
+  "ai",
+  "climate",
+  "healthcare",
+  "edtech",
+  "marketplaces",
+  "robotics",
+  "defense",
+  "hard tech",
+  "saas",
+  "consumer",
+  "creator tools",
 ] as const;
 
 // Connection type for the network graph
@@ -68,6 +85,49 @@ export const members: Member[] = [
   // ============================================
   // ADD YOUR ENTRY BELOW THIS LINE
   // ============================================
+
+  {
+    id: "rohanth-marem",
+    name: "Rohanth Marem",
+    website: "https://rohanth.com",
+    program: "Computer Science",
+    year: "2030",
+    roles: ["engineering", "software", "hardware"],
+    verticals: ["robotics", "ai", "healthcare"],
+    profilePic: "/photos/rohanth-marem.jpg",
+    twitter: "https://x.com/rohanthmarem",
+    connections: ["shayaan-azeem", "daniel-ching", "kevin-thomas", "austin-jian", "casper-dong", "zane-beeai"],
+  },
+
+  {
+    id: "jamie-seoh",
+    name: "Jamie Seoh",
+    website: "https://dwseoh.com",
+    program: "Software Engineering",
+    year: "2030",
+    roles: ["engineering", "ai/ml", "software"],
+    verticals: ["ai", "robotics", "consumer"],
+    profilePic: "/photos/jamie-seoh.jpg",
+    instagram: "https://instagram.com/dongwan_seoh",
+    twitter: "https://x.com/sdw1_",
+    linkedin: "https://linkedin.com/in/jamie-seoh",
+    connections: ["fiona-cai","ricky-tang","abdullah-rajput","vidu-widyalankara","victor-huang"],
+  },
+
+  {
+    id: "mubarak-piracha",
+    name: "Mubarak Ali Piracha",
+    website: "https://mubarakpiracha.xyz",
+    program: "Computational Mathematics",
+    year: "2030",
+    roles: ["engineering", "ai/ml", "software"],
+    verticals: ["ai", "saas"],
+    profilePic: "/photos/mubarak-piracha.jpg",
+    instagram: "https://www.instagram.com/mpsdailyday/",
+    twitter: "https://x.com/mubarkparacha",
+    linkedin: "https://www.linkedin.com/in/mubarak-ali-piracha-063a58384",
+    connections: ["shayaan-azeem", "muhib-waqar", "pranav-marthi"],
+  },
 
   // Example entry (copy this as a template):
   // {
@@ -87,6 +147,29 @@ export const members: Member[] = [
   //   connections: ["jane-smith", "bob-wilson"],
   // },
 
+  {
+    id: "yohance-pawania",
+    name: "Yohance Pawania",
+    website: "https://yohancepawania.dev",
+    program: "Computer Science",
+    year: "2031",
+    profilePic: "/photos/yohance-pawania.png",
+    twitter: "https://x.com/ypawania_",
+    linkedin: "https://www.linkedin.com/in/yohance-pawania-30aa902a4/",
+    connections: ["fiona-cai", "shayaan-azeem", "zane-beeai", "casper-dong", "aayan-rahman", "tony-pan"],
+  },
+  {
+    id: "zain-khalil",
+    name: "Zain Khalil",
+    website: "https://zainkhalil.ca",
+    program: "CS/BBA",
+    roles: [],
+    verticals: [],
+    profilePic: "/photos/zain-khalil.jpg",
+    instagram: "https://www.instagram.com/zain.sabry/",
+    linkedin: "https://www.linkedin.com/in/zainskhalil/",
+    connections: ["avaansh-nanda", "isha-shenoy"],
+  },
   {
     id: "shayaan-azeem",
     name: "Shayaan Azeem",
@@ -184,7 +267,7 @@ export const members: Member[] = [
   {
     id: "aayan-rahman",
     name: "Aayan Rahman",
-    website: "https://aayanrahman.me",
+    website: "https://ece.uwaterloo.ca/~a235rahm/",
     program: "Electrical Engineering",
     year: "2030",
     // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
@@ -195,7 +278,7 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/aayanr300/",
     twitter: "https://x.com/aayanr07",
     linkedin: "https://www.linkedin.com/in/aayan-rahman/",
-    connections: ["zane-beeai", "shayaan-azeem"],
+    connections: ["zane-beeai", "shayaan-azeem", "casper-dong", "avaansh-nanda"],
   },
   {
     id: "ibrahim-ansari",
@@ -227,7 +310,7 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/pranav.marthi/",
     twitter: "https://x.com/pranavcmarthi",
     linkedin: "https://www.linkedin.com/in/pranav-marthi-7714a4215/",
-    connections: ["shayaan-azeem", "zane-beeai", "kevin-thomas"]
+    connections: ["shayaan-azeem", "zane-beeai", "kevin-thomas"],
   },
   {
     id: "victor-huang",
@@ -242,7 +325,7 @@ export const members: Member[] = [
     profilePic: "/photos/victor-huang.png",
     instagram: "https://www.instagram.com/vichua061001/",
     linkedin: "https://www.linkedin.com/in/victor-qibin-huang/",
-    connections: ["shayaan-azeem"]
+    connections: ["shayaan-azeem"],
   },
   {
     id: "avaansh-nanda",
@@ -257,9 +340,9 @@ export const members: Member[] = [
     profilePic: "/photos/avaansh-nanda.jpg",
     instagram: "https://www.instagram.com/avaanshnanda/",
     linkedin: "https://www.linkedin.com/in/avaansh-nanda/",
-    connections: ["shayaan-azeem", "pranav-marthi"]
+    connections: ["shayaan-azeem", "pranav-marthi"],
   },
-    {
+  {
     id: "casper-dong",
     name: "Casper Dong",
     website: "https://casperdong.com",
@@ -272,7 +355,7 @@ export const members: Member[] = [
     profilePic: "/photos/casper-dong.jpg",
     twitter: "https://x.com/casperkeyidong",
     linkedin: "https://www.linkedin.com/in/casper-dong-64b623207/",
-    connections: ["shayaan-azeem", "pranav-marthi", "kevin-thomas"]
+    connections: ["shayaan-azeem", "pranav-marthi", "kevin-thomas"],
   },
   {
     id: "justin-wu",
@@ -287,7 +370,16 @@ export const members: Member[] = [
     profilePic: "/photos/justin-wu.jpg",
     twitter: "https://x.com/byjustinwu",
     linkedin: "https://www.linkedin.com/in/justinzijinwu/",
-    connections: ["shayaan-azeem", "daniel-ching", "casper-dong", "kevin-thomas", "aayan-rahman", "raghav-agarwal", "demir-eren", "austin-jian"]
+    connections: [
+      "shayaan-azeem",
+      "daniel-ching",
+      "casper-dong",
+      "kevin-thomas",
+      "aayan-rahman",
+      "raghav-agarwal",
+      "demir-eren",
+      "austin-jian",
+    ],
   },
   {
     id: "tony-pan",
@@ -303,7 +395,13 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/7onypan/",
     twitter: "https://x.com/tpypan",
     linkedin: "https://www.linkedin.com/in/tony-py-pan/",
-    connections: ["shayaan-azeem", "zane-beeai", "pranav-marthi", "casper-dong", "aayan-rahman"]
+    connections: [
+      "shayaan-azeem",
+      "zane-beeai",
+      "pranav-marthi",
+      "casper-dong",
+      "aayan-rahman",
+    ],
   },
   {
     id: "alex-xu",
@@ -318,7 +416,7 @@ export const members: Member[] = [
     profilePic: "/photos/alex-xu.jpg",
     twitter: "https://x.com/aalex_xu",
     linkedin: "https://www.linkedin.com/in/alex-xu7/",
-    connections: ["shayaan-azeem"]
+    connections: ["shayaan-azeem"],
   },
   {
     id: "austin-jian",
@@ -327,13 +425,13 @@ export const members: Member[] = [
     program: "Computer Science",
     year: "2030",
     // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
-    roles: [],
+    roles: ["engineering", "product", "design", "software"],
     // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
-    verticals: [],
+    verticals: ["ai", "saas", "consumer"],
     profilePic: "/photos/austin-jian.jpg",
     twitter: "https://x.com/austinjian_",
     linkedin: "https://www.linkedin.com/in/austin-jian",
-    connections: ["shayaan-azeem"]
+    connections: ["shayaan-azeem"],
   },
   {
     id: "abdullah-rajput",
@@ -349,7 +447,7 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/abdullah.rj29/",
     twitter: "https://x.com/abdullah_rjpt7",
     linkedin: "https://www.linkedin.com/in/abdullahrajput1",
-    connections: ["shayaan-azeem", "pranav-marthi", "muhib-waqar"]
+    connections: ["shayaan-azeem", "pranav-marthi", "muhib-waqar"],
   },
   {
     id: "demir-eren",
@@ -365,8 +463,15 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/demirereno/",
     twitter: "https://x.com/demireren_",
     linkedin: "https://www.linkedin.com/in/demireren/",
-    connections: ["shayaan-azeem", "muhib-waqar", 
-      "kevin-thomas", "justin-wu", "casper-dong", "austin-jian", "alex-xu"]
+    connections: [
+      "shayaan-azeem",
+      "muhib-waqar",
+      "kevin-thomas",
+      "justin-wu",
+      "casper-dong",
+      "austin-jian",
+      "alex-xu",
+    ],
   },
   {
     id: "advaith-karthikeyan",
@@ -382,7 +487,7 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/advaith_12/",
     twitter: "https://x.com/advaith_12",
     linkedin: "https://www.linkedin.com/in/advaithkarthikeyan/",
-    connections: ["shayaan-azeem", "muhib-waqar"]
+    connections: ["shayaan-azeem", "muhib-waqar"],
   },
   {
     id: "neiloy-chaudhuri",
@@ -398,22 +503,30 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/_neiloy/",
     twitter: "https://x.com/_neiloy",
     linkedin: "https://www.linkedin.com/in/neiloyc/",
-    connections: ["muhib-waqar", "demir-eren"]
-  },  
+    connections: ["muhib-waqar", "demir-eren"],
+  },
   {
     id: "parsa-ahmadnezhad",
     name: "Parsa Ahmadnezhad",
     website: "https://parsaa.ca",
     program: "Mathematics",
     // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
-    roles: [],
+    roles: ["engineering", "design", "product", "growth", "software"],
     // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
-    verticals: [],
+    verticals: ["ai", "saas", "consumer", "creator tools"],
     profilePic: "/photos/parsa.jpg",
     instagram: "https://instagram.com/parsa.1l",
     twitter: "https://x.com/parsaxa",
     linkedin: "https://linkedin.com/in/parsa-ahmadnezhad",
-    connections: ["kevin-thomas", "shayaan-azeem", "casper-dong", "abdullah-rajput", "pranav-marthi", "aayan-rahman", "fiona-cai"]
+    connections: [
+      "kevin-thomas",
+      "shayaan-azeem",
+      "casper-dong",
+      "abdullah-rajput",
+      "pranav-marthi",
+      "aayan-rahman",
+      "fiona-cai",
+    ],
   },
   {
     id: "ricky-tang",
@@ -429,7 +542,7 @@ export const members: Member[] = [
     instagram: "https://www.instagram.com/rickytang.dev/",
     twitter: "https://x.com/_rickytang",
     linkedin: "https://www.linkedin.com/in/ricky-tang-dev/",
-    connections: ["abdullah-rajput", "muhib-waqar"]
+    connections: ["abdullah-rajput", "muhib-waqar"],
   },
   {
     id: "raghav-agarwal",
@@ -444,6 +557,166 @@ export const members: Member[] = [
     connections: ["shayaan-azeem", "justin-wu", "casper-dong"],
   },
   {
+    id: "owen-li",
+    name: "Owen Li",
+    website: "https://owenli.ca/",
+    program: "Management Engineering",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["engineering", "product"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "consumer", "fintech"],
+    profilePic: "/photos/owen-li.jpg",
+    instagram: "https://www.instagram.com/oweniscool69/",
+    twitter: "https://x.com/Owenlingling",
+    linkedin: "https://www.linkedin.com/in/owen-li-waterloo/",
+    connections: ["ibrahim-ansari", "justin-wu", "avaansh-nanda"],
+  },
+  // ============================================
+  {
+    id: "isha-shenoy",
+    name: "Isha Shenoy",
+    website: "https://ishashenoy.dev/",
+    program: "Management Engineering",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["software", "product"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "consumer", "saas"],
+    profilePic: "/photos/isha-shenoy.png",
+    instagram: "https://www.instagram.com/ishas_14/",
+    twitter: "https://x.com/ichiberries",
+    linkedin: "https://www.linkedin.com/in/ishashenoy/",
+    connections: [],
+  },
+  {
+    id: "jalen-cheng",
+    name: "Jalen Cheng",
+    website: "https://jalen.ca",
+    program: "Computer Engineering",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["engineering", "software", "ai/ml", "product", "research" , "vc"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "saas", "fintech"],
+    profilePic: "/photos/jalen-cheng.jpg",
+    instagram: "https://www.instagram.com/jalen_cheng/",
+    twitter: "https://x.com/jalen_cheng",
+    linkedin: "https://linkedin.com/in/jalencheng",
+    connections: ["shayaan-azeem"],
+  },
+  {
+  id: "ayaan-faisal",
+  name: "Ayaan Faisal",
+  website: "https://ayaanfaisal.com",
+  program: "Honours Mathematics",
+  year: "2030",
+  // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+  roles: ["software", "ai", "data science"],
+  // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+  verticals: ["fintech", "ai"],
+  profilePic: "/photos/ayaan-faisal.png",
+  instagram: "https://instagram.com/ayaan.visuals",
+  twitter: "https://x.com/ayaanyyz",
+  linkedin: "https://linkedin.com/in/ayaanfaisal18",
+  connections: ["shayaan-azeem", "avaansh-nanda", "muhib-waqar", "aayan-rahman"],
+  },
+  {
+     id: "matthew-petersen",
+     name: "Matthew Petersen",
+     website: "https://matthewpetersen.ca",
+     program: "Systems Design Engineering",
+     year: "2030",
+     // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+     roles: ["engineering", "design", "product"],
+     // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+     verticals: ["ai", "saas", "consumer"],
+     profilePic: "/photos/matthew-petersen.png",
+     instagram: "https://instagram.com/mxtthewpetersen",
+     twitter: "https://x.com/mmptrsn",
+     linkedin: "https://linkedin.com/in/petersen-matthew",
+     connections: ["justin-wu", "raghav-agarwal", "shayaan-azeem"],
+  },
+  {
+    id: "vidu-widyalankara",
+    name: "Vidu Widyalankara",
+    website: "https://vidsterbroyo.com/",
+    program: "Computer Science",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["engineering", "ai/ml", "software"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["fintech", "ai", "saas", "climate", "robotics"],
+    profilePic: "/photos/vidu-widyalankara.jpg",
+    twitter: "https://x.com/vidsterbroyo",
+    linkedin: "https://www.linkedin.com/in/viduw/",
+    connections: ["anahat-chhatwal", "victor-huang", "abdullah-rajput", "fiona-cai"]
+  },
+  {
+    id: "anahat-chhatwal",
+    name: "Anahat Chhatwal",
+    website: "https://anahat-chhatwal.vercel.app/",
+    program: "Computer Science and Business Administration",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["software", "product", "engineering", "design"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "consumer", "saas", "fintech", "creator tools"],
+    profilePic: "/photos/anahat-chhatwal.jpg",
+    linkedin: "https://www.linkedin.com/in/anahat-kc/",
+    connections: ["shayaan-azeem"]
+  },
+  {
+    id: "caleb-bellsmith",
+    name: "Caleb Bellsmith",
+    website: "https://calebbellsmith.github.io/",
+    program: "Biomedical Engineering",
+    year: "2030",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["hardware", "product", "engineering", "design"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["robotics", "defense", "healthcare", "hard tech"],
+    profilePic: "/photos/caleb-bellsmith.jpg",
+    linkedin: "https://www.linkedin.com/in/calebbellsmithuw/",
+    connections: ["zane-beeai"],
+  },
+  {
+    id: "jinay-patel",
+    name: "Jinay Patel",
+    website: "https://jinay-patel.vercel.app/",
+    profilePic: "/photos/jinay-patel.jpg",
+    connections: ["shayaan-azeem"],  // friends in the webring
+    program: "Computer Engineering",
+    year: "2031",
+    linkedin: "https://www.linkedin.com/in/jinay-patel-6369002b4/",
+  },
+  {
+    id: "ali-imran",
+    name: "Ali Imran",
+    website: "https://aliimrans.com",
+    program: "Software Engineering",
+    roles: ["engineering", "ai/ml", "software"],
+    verticals: ["ai", "robotics", "saas"],
+    profilePic: "/photos/ali-imran.jpg",
+    twitter: "https://x.com/aliidevs",
+    linkedin: "https://www.linkedin.com/in/ali-intelligence",
+    connections: ["shayaan-azeem", "abdullah-rajput", "ricky-tang", "pranav-marthi"],
+  },
+// ============================================
+  {
+    id: "zain-khan",
+    name: "Zain Khan",
+    website: "https://zainkhan.dev",
+    program: "Computer Engineering",
+    year: "2030",
+    roles: [],
+    verticals: [],
+    profilePic: "/photos/zain-khan.jpg",
+    instagram: "https://www.instagram.com/7k.zain/",
+    twitter: "https://x.com/sevenkzain",
+    linkedin: "https://www.linkedin.com/in/zainkkhan/",
+    connections: ["abdullah-rajput"],
+  },
+  {
     id: "ammar-adam",
     name: "Ammar Adam",
     website: "https://ammaradam.com/",
@@ -456,8 +729,6 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/ammar-adam/",
     connections: ["shayaan-azeem", "pranav-marthi", "avaansh-nanda", "muhib-waqar"],
   },
-  // ============================================
-
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
@@ -465,12 +736,12 @@ export const members: Member[] = [
 // Helper to get all connections for the network graph
 export function getConnections(): Connection[] {
   const connections: Connection[] = [];
-  
-  members.forEach(member => {
+
+  members.forEach((member) => {
     if (member.connections) {
-      member.connections.forEach(targetId => {
+      member.connections.forEach((targetId) => {
         // Only add connection if target member exists
-        if (members.some(m => m.id === targetId)) {
+        if (members.some((m) => m.id === targetId)) {
           connections.push({
             fromId: member.id,
             toId: targetId,
@@ -479,20 +750,23 @@ export function getConnections(): Connection[] {
       });
     }
   });
-  
+
   return connections;
 }
 
 // Helper to get the next and previous members for webring navigation
-export function getWebringNavigation(currentWebsite: string): { prev: Member | null; next: Member | null } {
-  const index = members.findIndex(m => m.website === currentWebsite);
+export function getWebringNavigation(currentWebsite: string): {
+  prev: Member | null;
+  next: Member | null;
+} {
+  const index = members.findIndex((m) => m.website === currentWebsite);
   if (index === -1) {
     return { prev: null, next: null };
   }
-  
+
   const prevIndex = (index - 1 + members.length) % members.length;
   const nextIndex = (index + 1) % members.length;
-  
+
   return {
     prev: members[prevIndex],
     next: members[nextIndex],

@@ -380,6 +380,9 @@ a {
   font-size: 1rem;
   color: var(--foreground);
   vertical-align: middle;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .members-table td:nth-child(4) {

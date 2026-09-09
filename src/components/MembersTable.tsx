@@ -7,9 +7,10 @@ interface MembersTableProps {
     members: Member[];
     searchQuery?: string;
     membersWithoutEmbed?: Set<string>;
+    referrerDullIds?: Set<string>;
 }
 
-export default function MembersTable({ members, searchQuery, membersWithoutEmbed = new Set() }: MembersTableProps) {
+export default function MembersTable({ members, searchQuery, membersWithoutEmbed = new Set(), referrerDullIds = new Set() }: MembersTableProps) {
     const highlightText = (text: string | null | undefined) => {
         if (!text || !searchQuery) return text || '';
         
@@ -43,9 +44,10 @@ export default function MembersTable({ members, searchQuery, membersWithoutEmbed
                 </thead>
                 <tbody>
                     {members.map((member, index) => {
-                        const hasNoEmbed = membersWithoutEmbed.has(member.id);
+                        const isDulled = membersWithoutEmbed.has(member.id) || referrerDullIds.has(member.id);
+                        const rowOpacity = isDulled ? 0.5 : undefined;
                         return (
-                        <tr key={member.id} style={hasNoEmbed ? { opacity: 0.5 } : undefined}>
+                        <tr key={member.id} style={rowOpacity ? { opacity: rowOpacity } : undefined}>
                             <td className="user-cell">
                                 {member.profilePic ? (
                                     <img 

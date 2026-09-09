@@ -86,7 +86,7 @@ export async function GET() {
             
             // Center icon - links to the webring homepage
             const centerLink = document.createElement('a');
-            centerLink.href = baseUrl;
+            centerLink.href = userId ? baseUrl + '?ref=' + encodeURIComponent(userId) : baseUrl;
             centerLink.target = '_blank';
             centerLink.rel = 'noopener noreferrer';
             centerLink.title = 'Visit uwaterloo.network';
