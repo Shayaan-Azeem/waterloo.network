@@ -87,6 +87,19 @@ export const members: Member[] = [
   // ============================================
 
   {
+    id: "peter-shao",
+    name: "Peter Shao",
+    website: "https://peteryhs.com",
+    program: "Computer Engineering",
+    year: "2031",
+    roles: ["engineering", "software", "hardware", "ai/ml"],
+    verticals: ["ai", "robotics", "cloud/infra"],
+    profilePic: "/photos/peter-shao.jpg",
+    instagram: "https://www.instagram.com/peter3_1415926/",
+    linkedin: "https://www.linkedin.com/in/peter-shao-ysh/",
+  },
+
+  {
     id: "rohanth-marem",
     name: "Rohanth Marem",
     website: "https://rohanth.com",
