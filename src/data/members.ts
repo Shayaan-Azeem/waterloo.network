@@ -716,6 +716,22 @@ export const members: Member[] = [
     linkedin: "https://www.linkedin.com/in/zainkkhan/",
     connections: ["abdullah-rajput"],
   },
+  {
+    id: "nicholas-kim",
+    name: "Nicholas Kim",
+    website: "https://nickkim.dev",
+    program: "Management Engineering",
+    year: "2031",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["engineering", "software", "ai/ml", "product", "research"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["ai", "saas", "fintech"],
+    profilePic: "/photos/nicholas-kim.png",
+    instagram: "https://www.instagram.com/nicholas.kim17/",
+    twitter: "https://x.com/nkimmer_17",
+    linkedin: "https://linkedin.com/in/nicholaskim17",
+    connections: ["justin-wu", "casper-dong","austin-jian",],
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
