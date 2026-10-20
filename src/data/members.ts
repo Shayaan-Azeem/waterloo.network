@@ -87,6 +87,19 @@ export const members: Member[] = [
   // ============================================
 
   {
+    id: "peter-shao",
+    name: "Peter Shao",
+    website: "https://peteryhs.com",
+    program: "Computer Engineering",
+    year: "2031",
+    roles: ["engineering", "software", "hardware", "ai/ml"],
+    verticals: ["ai", "robotics", "cloud/infra"],
+    profilePic: "/photos/peter-shao.jpg",
+    instagram: "https://www.instagram.com/peter3_1415926/",
+    linkedin: "https://www.linkedin.com/in/peter-shao-ysh/",
+  },
+
+  {
     id: "rohanth-marem",
     name: "Rohanth Marem",
     website: "https://rohanth.com",
@@ -150,7 +163,7 @@ export const members: Member[] = [
   {
     id: "yohance-pawania",
     name: "Yohance Pawania",
-    website: "https://yohancepawania.dev",
+    website: "https://yohancepawania.com",
     program: "Computer Science",
     year: "2031",
     profilePic: "/photos/yohance-pawania.png",
@@ -715,6 +728,19 @@ export const members: Member[] = [
     twitter: "https://x.com/sevenkzain",
     linkedin: "https://www.linkedin.com/in/zainkkhan/",
     connections: ["abdullah-rajput"],
+  },
+  {
+    id: "ammar-adam",
+    name: "Ammar Adam",
+    website: "https://ammaradam.com/",
+    program: "CS & Finance",
+    roles: ["software", "product", "finance"],
+    verticals: ["fintech", "consumer", "ai"],
+    profilePic: "/photos/ammar-adam.png",
+    twitter: "https://x.com/ammaradam_5807?s=11",
+    instagram: "https://www.instagram.com/ammar_adam587/",
+    linkedin: "https://www.linkedin.com/in/ammar-adam/",
+    connections: ["shayaan-azeem", "pranav-marthi", "avaansh-nanda", "muhib-waqar", "abdullah-rajput"],
   },
   {
     id: "nicholas-kim",
