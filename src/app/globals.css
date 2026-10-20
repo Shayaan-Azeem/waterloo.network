@@ -160,6 +160,47 @@ a {
   color: var(--hover-color);
 }
 
+/* Other campus networks */
+.campus-networks {
+  color: var(--secondary);
+  font-size: 0.75rem;
+  line-height: 1.7;
+}
+
+.campus-networks summary {
+  width: fit-content;
+  cursor: pointer;
+}
+
+.campus-networks summary:hover {
+  color: var(--foreground);
+}
+
+.campus-networks-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.25rem 0.8rem;
+  list-style: none;
+  margin-top: 0.5rem;
+}
+
+.campus-networks-list a {
+  overflow-wrap: anywhere;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.campus-networks-list a:hover {
+  color: var(--hover-color);
+}
+
+.campus-networks summary:focus-visible,
+.campus-networks-list a:focus-visible {
+  outline: 2px solid var(--hover-color);
+  outline-offset: 4px;
+  border-radius: 2px;
+}
+
 /* Search */
 .search-wrapper {
   position: relative;
