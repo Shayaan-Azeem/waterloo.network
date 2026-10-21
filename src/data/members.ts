@@ -758,6 +758,19 @@ export const members: Member[] = [
     linkedin: "https://linkedin.com/in/nicholaskim17",
     connections: ["justin-wu", "casper-dong","austin-jian",],
   },
+  {
+    id: "rohan-katreddy",
+    name: "Rohan Katreddy",
+    website: "https://rohan.tech",
+    program: "Computer Science",
+    year: "2028",
+    roles: ["engineering", "ai/ml", "hardware", "research", "software"],
+    verticals: ["ai", "robotics", "hard tech", "defense"],
+    profilePic: "/photos/rohan-katreddy.jpg",
+    twitter: "https://x.com/rohan_katreddy",
+    linkedin: "https://www.linkedin.com/in/rohankatreddy/",
+    connections: ["shayaan-azeem", "jalen-cheng", "victor-huang"],
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
