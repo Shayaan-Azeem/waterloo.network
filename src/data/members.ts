@@ -758,6 +758,21 @@ export const members: Member[] = [
     linkedin: "https://linkedin.com/in/nicholaskim17",
     connections: ["justin-wu", "casper-dong","austin-jian",],
   },
+  {
+    id: "brian-xue",
+    name: "Brian Xue",
+    website: "https://prmntr.com",
+    program: "Honours Mathematics",
+    // options: engineering, design, product, growth, ai/ml, research, hardware, quant, software, finance, vc
+    roles: ["software", "engineering", "design", "product"],
+    // options: fintech, ai, climate, healthcare, edtech, marketplaces, robotics, defense, hard tech, saas, consumer, creator tools
+    verticals: ["edtech", "consumer"],
+    profilePic: "/photos/brian-xue.jpg",
+    instagram: "https://www.instagram.com/_prmntr/",
+    twitter: "https://x.com/_prmntr",
+    linkedin: "https://www.linkedin.com/in/b-xue08/",
+    connections: ["shayaan-azeem"],
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
