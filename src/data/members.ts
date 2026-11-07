@@ -758,6 +758,16 @@ export const members: Member[] = [
     linkedin: "https://linkedin.com/in/nicholaskim17",
     connections: ["justin-wu", "casper-dong","austin-jian",],
   },
+  {
+    id: "dylan-rolfe",
+    name: "Dylan Rolfe",
+    website: "https://dylanrolfe.ca",
+    program: "Mechatronics Engineering",
+    year: "2031",
+    profilePic: "/photos/dylan-rolfe.jpg",
+    linkedin: "https://linkedin.com/in/dylanrolfe",
+    connections: [],
+  },
   // ADD YOUR ENTRY ABOVE THIS LINE
   // ============================================
 ];
