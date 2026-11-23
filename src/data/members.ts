@@ -87,6 +87,14 @@ export const members: Member[] = [
   // ============================================
 
   {
+    id: "justin-tingxuan-wang",
+    name: "Justin Tingxuan Wang",
+    website: "https://www.justintwx.me/",
+    profilePic: "/photos/justin-tingxuan-wang.jpg",
+    connections: [],
+  },
+
+  {
     id: "peter-shao",
     name: "Peter Shao",
     website: "https://peteryhs.com",
