@@ -87,6 +87,14 @@ export const members: Member[] = [
   // ============================================
 
   {
+    id: "amaar-syed",
+    name: "Amaar Syed",
+    website: "https://amaarsy.com",
+    profilePic: "/photos/amaar-syed.jpg",
+    twitter: "https://x.com/amaarrsyed",
+    linkedin: "https://www.linkedin.com/in/amaarshah/",
+  },
+  {
     id: "peter-shao",
     name: "Peter Shao",
     website: "https://peteryhs.com",
